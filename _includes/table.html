@@ -26,8 +26,8 @@
       <td>Yes</td>
     </tr>
     <tr class="comment-row" data-tool="primer">
-      <td colspan="8">
-        <div x-data="fetchReactions('primer')" x-show="!isLoading" class="flex">
+      <td colspan="8" x-data="toolReactions('primer')" x-show="!isLoading">
+        <div class="flex">
           <!-- Comments Count -->
           <div class="flex items-center space-x-8">
             <span class="font-semibold space-x-1">💬</span>

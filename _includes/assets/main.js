@@ -20,7 +20,7 @@ const EMOJI_MAP = {
   EYES: '👀',
 }
 
-function fetchReactions(tool) {
+function toolReactions(tool) {
   return {
     commentsCount: 0,
     reactions: {},
@@ -61,7 +61,3 @@ function fetchReactions(tool) {
     },
   }
 }
-
-
-//   console.log(response)
-// }
