@@ -1,0 +1,72 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Links</th>
+      <th>Batteries</th>
+      <th>Integration</th>
+      <th>Styling</th>
+      <th>Frontend Framework</th>
+      <th>Pricing</th>
+      <th>Actively maintained</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Primer Design System</td>
+      <td><a href="https://primer.style/">Website</a>, <a href="https://github.com/primer/css">GitHub</a></td>
+      <td>Full design system, CSS framework, Icons, Components</td>
+      <td>
+        React<br>
+        ViewComponent
+      </td>
+      <td></td>
+      <td>React</td>
+      <td>Open Source</td>
+      <td>Yes</td>
+    </tr>
+    <tr class="comment-row" data-tool="primer">
+      <td colspan="8">
+        <div x-data="fetchReactions('primer')" x-show="!isLoading" class="flex">
+          <!-- Comments Count -->
+          <div class="flex items-center space-x-8">
+            <span class="font-semibold space-x-1">💬</span>
+            <span x-text="commentsCount || 0" class="text-gray-700"></span>
+          </div>
+          <!-- Emoji Reactions -->
+          <template x-for="(data, name) in reactions">
+            <div class="flex items-center space-x-4">
+              <span x-text="getEmoji(name)" class="space-x-1"></span>
+              <span x-text="data.count || 0" class="text-gray-700"></span>
+            </div>
+          </template>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>RailsUI</td>
+      <td><a href="https://railsui.com/">Website</a>, <a href="https://github.com/railsui/railsui">GitHub</a></td>
+      <td>Design system, Components, Themes, Templates</td>
+      <td>Ruby on Rails</td>
+      <td>CSS, TailwindCSS</td>
+      <td>Hotwire</td>
+      <td>Commercial</td>
+      <td>Yes</td>
+    </tr>
+
+    <tr>
+      <td>Rails Designer</td>
+      <td><a href="https://railsdesigner.com/">Website</a></td>
+      <td>UI Components, Templates, Design System</td>
+      <td>Ruby on Rails</td>
+      <td>CSS, TailwindCSS</td>
+      <td>Hotwire</td>
+      <td>Commercial</td>
+      <td>Yes</td>
+    </tr>
+    <!-- TODO bootstrap -->
+    <!-- https://rails-components.com/ -->
+  </tbody>
+</table>

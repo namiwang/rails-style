@@ -1,0 +1,57 @@
+body > main > div.w {
+  max-width: 1280px;
+}
+
+/* Comment Row */
+.comment-row {
+  margin-bottom: 1rem;
+}
+
+
+/* Flexbox Utility Classes */
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-1 {
+  margin-right: 0.25rem;
+}
+
+.space-x-2 {
+  margin-right: 0.5rem;
+}
+
+.space-x-4 {
+  margin-right: 1rem;
+}
+
+.space-x-8 {
+  margin-right: 2rem;
+}
+
+/* Typography */
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-700 {
+  color: #4a4a4a;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Hover Effects */
+.comment-row:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}

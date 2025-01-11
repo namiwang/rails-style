@@ -2,15 +2,34 @@
 layout: home
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<style>
+  {% include assets/main.css %}
+</style>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+_rails.style_ is a curated list of design systems, UI components, and frontend frameworks for Ruby on Rails applications.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+<!-- TODO desc -->
 
+## Design Systems & Frameworks
 
-[jekyll-organization]: https://github.com/jekyll
+<!-- TODO component libraries -->
+
+<!-- view component -->
+<!-- phlex -->
+<!-- cells -->
+<!-- draper -->
+
+{% include table.html %}
+
+## Rendering Solutions
+
+<footer>
+
+Made by [Nami W](https://nami.land) · [About Me & My Projects](https://nami.land/about) · [Buy me a coffee ☕️](https://buymeacoffee.com/namiw)
+
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer>
+  {% include assets/main.js %}
+</script>
