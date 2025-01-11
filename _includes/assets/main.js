@@ -61,3 +61,18 @@ function toolReactions(tool) {
     },
   }
 }
+
+function commentsPanel() {
+  return {
+    isPanelOpen: false,
+    selectedTool: null,
+    openCommentsPanel(tool) {
+      this.isPanelOpen = true
+      this.selectedTool = tool
+    },
+    closeCommentsPanel() {
+      this.isPanelOpen = false
+      this.selectedTool = null
+    },
+  }
+}

@@ -65,7 +65,3 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# # custom webrick header for local testing
-# webrick:
-#   headers:
-#     Content-Security-Policy: default-src 'self'; script-src-elem 'self' 'unsafe-inline';

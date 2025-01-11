@@ -7,6 +7,10 @@ body > main > div.w {
   margin-bottom: 1rem;
 }
 
+.comment-row:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
 
 /* Flexbox Utility Classes */
 .flex {
@@ -37,6 +41,14 @@ body > main > div.w {
   margin-right: 2rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 /* Typography */
 .font-semibold {
   font-weight: 600;
@@ -46,12 +58,59 @@ body > main > div.w {
   color: #4a4a4a;
 }
 
-p {
-  margin: 0.5rem 0;
+.text-gray-500 {
+  color: #a0aec0;
 }
 
-/* Hover Effects */
-.comment-row:hover {
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+/* p {
+  margin: 0.5rem 0;
+} */
+
+/* offcanvas panel */
+
+/* Initial hidden state */
+.translate-x-full {
+  transform: translateX(100%); /* Move off-screen to the right */
+}
+
+/* Visible state */
+.translate-x-0 {
+  transform: translateX(0); /* Reset to visible position */
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Panel container styles */
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-128 {
+  width: 32rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.p-4 {
+  padding: 1rem;
 }
