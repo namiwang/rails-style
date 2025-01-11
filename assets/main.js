@@ -67,8 +67,49 @@ function commentsPanel() {
     isPanelOpen: false,
     selectedTool: null,
     openCommentsPanel(tool) {
+      debugger
       this.isPanelOpen = true
       this.selectedTool = tool
+
+      // <script src="https://giscus.app/client.js"
+      //   data-giscus-script="true"
+      //   data-repo="giscus/giscus"
+      //   data-repo-id="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
+      //   data-mapping="number"
+      //   data-term="62"
+      //   data-reactions-enabled="1"
+      //   data-emit-metadata="0"
+      //   data-input-position="bottom"
+      //   data-theme="preferred_color_scheme"
+      //   data-lang="en"
+      //   crossorigin="anonymous"
+      //   async>
+      // </script>`
+
+      this.$nextTick(() => {
+        const script = document.createElement('script')
+        script.src = "https://giscus.app/client.js"
+        script.dataset.repo = "giscus/giscus"
+        script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
+        script.dataset.mapping = "number"
+        script.dataset.term = "62"
+        script.dataset.reactionsEnabled = "1"
+        script.dataset.emitMetadata = "0"
+        script.dataset.inputPosition = "bottom"
+        script.dataset.theme = "preferred_color_scheme"
+        script.dataset.lang = "en"
+        script.crossorigin = "anonymous"
+        script.async = true
+
+        script.onload = () => {
+          console.log('Remote script has been loaded and executed.');
+        }
+        script.onerror = () => {
+          console.error('Failed to load the remote script.');
+        }
+
+        document.querySelector('#comments-panel').appendChild(script)
+      })
     },
     closeCommentsPanel() {
       this.isPanelOpen = false

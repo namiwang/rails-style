@@ -25,25 +25,16 @@ title: rails.style
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rails.style" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
 # Build settings
-# theme: minima
-# theme: no-style-please
-remote_theme: riggraz/no-style-please
+theme: minima
 
-theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
-  lowercase_titles: true # show titles in lowercase in lists
-
-plugins:
+# plugins:
 #   - jekyll-feed
-  - jekyll-remote-theme
+#   - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -65,3 +56,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# webrick:
+#   headers:
+#     Access-Control-Allow-Origin: "*"

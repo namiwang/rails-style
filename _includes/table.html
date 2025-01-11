@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>Primer Design System</td>
+        <td rowspan="2">Primer Design System</td>
         <td><a href="https://primer.style/">Website</a>, <a href="https://github.com/primer/css">GitHub</a></td>
         <td>Full design system, CSS framework, Icons, Components</td>
         <td>
@@ -27,9 +27,9 @@
         <td>Yes</td>
       </tr>
 
-      <tr class="comment-row" data-tool="primer">
+      <tr rowspan="2" class="comment-row" data-tool="primer">
         <!-- @click syntax not being recognized as HTML -->
-        <td colspan="8"
+        <td colspan="7"
           x-data="toolReactions('primer')"
           x-show="!isLoading"
           x-on:click="openCommentsPanel('primer')"
@@ -81,6 +81,7 @@
 
   <!-- Offcanvas Side Panel -->
   <div
+    id="comments-panel"
     class="fixed top-0 right-0 h-full w-128 bg-white shadow-lg transition-transform"
     x-bind:class="isPanelOpen ? 'translate-x-0' : 'translate-x-full'"
     x-on:click.away="closeCommentsPanel()"
