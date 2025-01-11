@@ -86,6 +86,13 @@
     x-on:click.away="closeCommentsPanel()"
     x-on:click.stop
   >
+    <a
+      x-on:click="closeCommentsPanel()"
+      class="absolute top-4 right-4 text-gray-500 hover-underline hover-pointer"
+    >
+      X
+    </a>
+
     <div class="p-4">
       <h2 class="font-semibold">Comments for <span x-text="selectedTool"></span></h2>
     </div>

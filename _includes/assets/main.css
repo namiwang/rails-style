@@ -45,6 +45,10 @@ body > main > div.w {
   margin-top: 1rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -61,10 +65,6 @@ body > main > div.w {
 .text-gray-500 {
   color: #a0aec0;
 }
-
-/* p {
-  margin: 0.5rem 0;
-} */
 
 /* offcanvas panel */
 
@@ -87,20 +87,41 @@ body > main > div.w {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .top-0 {
   top: 0;
+}
+
+.top-4 {
+  top: 1rem;
 }
 
 .right-0 {
   right: 0;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .h-full {
   height: 100%;
 }
 
+/* Default width for the panel */
 .w-128 {
-  width: 32rem;
+  width: 32rem; /* Default width */
+}
+
+/* For narrow screens, set max-width */
+@media (max-width: 768px) {
+  .w-128 {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 24rem; /* Maximum width */
+  }
 }
 
 .bg-white {
@@ -111,6 +132,10 @@ body > main > div.w {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.p-4 {
-  padding: 1rem;
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
 }
