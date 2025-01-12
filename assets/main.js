@@ -1,5 +1,6 @@
 const TOOL_DISCUSSION_IDS = {
-  primer: 1
+  primer: 2,
+  polaris: 3,
 }
 
 const EMOJI_MAP = {
@@ -25,7 +26,7 @@ function toolReactions(tool) {
         const discussionId = TOOL_DISCUSSION_IDS[tool]
         if (!discussionId) return
 
-        const url = "https://giscus.app/api/discussions?repo=giscus%2Fgiscus&term=Welcome+to+giscus%21&number=0&strict=true&last=15"
+        const url = `https://giscus.app/api/discussions?repo=namiwang%2Frails-style&number=${discussionId}&strict=true&last=15`
         const response = await fetch(url)
         const data = await response.json()
 
@@ -66,24 +67,25 @@ function commentsPanel() {
       this.$nextTick(() => {
         const script = document.createElement('script')
         script.src = "https://giscus.app/client.js"
-        script.dataset.repo = "namiwang/fiber-note"
-        script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkyNzE3OTkyNzk="
+        script.dataset.repo = "namiwang/rails-style"
+        script.dataset.repoId = "R_kgDONjz4uw"
         script.dataset.mapping = "number"
-        script.dataset.term = "340"
+        script.dataset.term = TOOL_DISCUSSION_IDS[tool]
         script.dataset.reactionsEnabled = "1"
         script.dataset.emitMetadata = "0"
         script.dataset.inputPosition = "top"
-        script.dataset.theme = "preferred_color_scheme"
+        script.dataset.theme = "light"
         script.dataset.lang = "en"
+        // script.dataset.loading = "lazy"
         script.crossorigin = "anonymous"
         script.async = true
 
-        script.onload = () => {
-          console.log('Remote script has been loaded and executed.');
-        }
-        script.onerror = () => {
-          console.error('Failed to load the remote script.');
-        }
+        // script.onload = () => {
+        //   console.log('Remote script loaded and executed')
+        // }
+        // script.onerror = () => {
+        //   console.error('Failed to load the remote script')
+        // }
 
         document.querySelector('#comments-panel').appendChild(script)
       })

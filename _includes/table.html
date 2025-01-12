@@ -26,8 +26,7 @@
         <td>Open Source</td>
         <td>Yes</td>
       </tr>
-
-      <tr rowspan="2" class="comment-row" data-tool="primer">
+      <tr rowspan="2" class="comment-row">
         <!-- @click syntax not being recognized as HTML -->
         <td colspan="7"
           x-data="toolReactions('primer')"
@@ -49,23 +48,11 @@
               </div>
             </template>
           </div>
-
         </td>
       </tr>
 
       <tr>
-        <td>RailsUI</td>
-        <td><a href="https://railsui.com/">Website</a>, <a href="https://github.com/railsui/railsui">GitHub</a></td>
-        <td>Design system, Components, Themes, Templates</td>
-        <td>Ruby on Rails</td>
-        <td>CSS, TailwindCSS</td>
-        <td>Hotwire</td>
-        <td>Commercial</td>
-        <td>Yes</td>
-      </tr>
-
-      <tr>
-        <td>Rails Designer</td>
+        <td rowspan="2">Polaris</td>
         <td><a href="https://railsdesigner.com/">Website</a></td>
         <td>UI Components, Templates, Design System</td>
         <td>Ruby on Rails</td>
@@ -74,8 +61,30 @@
         <td>Commercial</td>
         <td>Yes</td>
       </tr>
-      <!-- TODO bootstrap -->
-      <!-- https://rails-components.com/ -->
+      <tr rowspan="2" class="comment-row">
+        <!-- @click syntax not being recognized as HTML -->
+        <td colspan="7"
+          x-data="toolReactions('polaris')"
+          x-show="!isLoading"
+          x-on:click="openCommentsPanel('polaris')"
+          x-on:click.stop
+        >
+          <div class="flex">
+            <!-- Comments Count -->
+            <div class="flex items-center space-x-8">
+              <span class="font-semibold space-x-1">💬</span>
+              <span x-text="commentsCount || 0" class="text-gray-700"></span>
+            </div>
+            <!-- Emoji Reactions -->
+            <template x-for="(data, name) in reactions">
+              <div class="flex items-center space-x-4">
+                <span x-text="getEmoji(name)" class="space-x-1"></span>
+                <span x-text="data.count || 0" class="text-gray-700"></span>
+              </div>
+            </template>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 
@@ -94,7 +103,7 @@
       X
     </a>
 
-    <h2>Comments for <span x-text="selectedTool"></span></h2>
+    <h3><span x-text="selectedTool"></span></h3>
   </div>
 
 </section>
