@@ -31,18 +31,3 @@ Made by [Nami W](https://nami.land) · [About Me & My Projects](https://nami.lan
 
 <script defer src="/assets/main.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-<script src="https://giscus.app/client.js"
-        data-repo="namiwang/fiber-note"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkyNzE3OTkyNzk="
-        data-mapping="number"
-        data-term="340"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>

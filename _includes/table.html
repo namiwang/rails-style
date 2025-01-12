@@ -82,7 +82,7 @@
   <!-- Offcanvas Side Panel -->
   <div
     id="comments-panel"
-    class="fixed top-0 right-0 h-full w-128 bg-white shadow-lg transition-transform"
+    class="fixed top-0 right-0 h-full w-128 p-4 bg-white shadow-lg transition-transform"
     x-bind:class="isPanelOpen ? 'translate-x-0' : 'translate-x-full'"
     x-on:click.away="closeCommentsPanel()"
     x-on:click.stop
@@ -94,9 +94,7 @@
       X
     </a>
 
-    <div class="p-4">
-      <h2 class="font-semibold">Comments for <span x-text="selectedTool"></span></h2>
-    </div>
+    <h2>Comments for <span x-text="selectedTool"></span></h2>
   </div>
 
 </section>

@@ -1,10 +1,3 @@
-// for each tool
-//   fetch discussion data
-//   render metadata (reactions and comments count)
-//   on click, open modal
-
-// https://codesandbox.io/p/sandbox/alpine-offcanvas-b2w4g?file=%2Findex.html%3A22%2C1
-
 const TOOL_DISCUSSION_IDS = {
   primer: 1
 }
@@ -67,35 +60,19 @@ function commentsPanel() {
     isPanelOpen: false,
     selectedTool: null,
     openCommentsPanel(tool) {
-      debugger
       this.isPanelOpen = true
       this.selectedTool = tool
-
-      // <script src="https://giscus.app/client.js"
-      //   data-giscus-script="true"
-      //   data-repo="giscus/giscus"
-      //   data-repo-id="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
-      //   data-mapping="number"
-      //   data-term="62"
-      //   data-reactions-enabled="1"
-      //   data-emit-metadata="0"
-      //   data-input-position="bottom"
-      //   data-theme="preferred_color_scheme"
-      //   data-lang="en"
-      //   crossorigin="anonymous"
-      //   async>
-      // </script>`
 
       this.$nextTick(() => {
         const script = document.createElement('script')
         script.src = "https://giscus.app/client.js"
-        script.dataset.repo = "giscus/giscus"
-        script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
+        script.dataset.repo = "namiwang/fiber-note"
+        script.dataset.repoId = "MDEwOlJlcG9zaXRvcnkyNzE3OTkyNzk="
         script.dataset.mapping = "number"
-        script.dataset.term = "62"
+        script.dataset.term = "340"
         script.dataset.reactionsEnabled = "1"
         script.dataset.emitMetadata = "0"
-        script.dataset.inputPosition = "bottom"
+        script.dataset.inputPosition = "top"
         script.dataset.theme = "preferred_color_scheme"
         script.dataset.lang = "en"
         script.crossorigin = "anonymous"
