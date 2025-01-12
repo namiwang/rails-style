@@ -2,6 +2,8 @@
   max-width: 1280px;
 } */
 
+[x-cloak] { display: none !important; }
+
 /* Comment Row */
 .comment-row {
   margin-bottom: 1rem;

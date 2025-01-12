@@ -1,3 +1,5 @@
+
+
 <section x-data="commentsPanel()">
   <table>
     <thead>
@@ -95,6 +97,7 @@
     x-bind:class="isPanelOpen ? 'translate-x-0' : 'translate-x-full'"
     x-on:click.away="closeCommentsPanel()"
     x-on:click.stop
+    x-cloak
   >
     <a
       x-on:click="closeCommentsPanel()"
