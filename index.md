@@ -30,4 +30,5 @@ Made by [Nami W](https://nami.land) · [About Me & My Projects](https://nami.lan
 </footer>
 
 <script defer src="/assets/main.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs-component@latest/dist/component.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>

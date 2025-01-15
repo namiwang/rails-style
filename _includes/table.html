@@ -1,5 +1,3 @@
-
-
 <section x-data="commentsPanel()">
   <table>
     <thead>
@@ -29,27 +27,8 @@
         <td>Yes</td>
       </tr>
       <tr rowspan="2" class="comment-row">
-        <!-- @click syntax not being recognized as HTML -->
-        <td colspan="7"
-          x-data="toolReactions('primer')"
-          x-show="!isLoading"
-          x-on:click="openCommentsPanel('primer')"
-          x-on:click.stop
-        >
-          <div class="flex">
-            <!-- Comments Count -->
-            <div class="flex items-center space-x-8">
-              <span class="font-semibold space-x-1">💬</span>
-              <span x-text="commentsCount || 0" class="text-gray-700"></span>
-            </div>
-            <!-- Emoji Reactions -->
-            <template x-for="(data, name) in reactions">
-              <div class="flex items-center space-x-4">
-                <span x-text="getEmoji(name)" class="space-x-1"></span>
-                <span x-text="data.count || 0" class="text-gray-700"></span>
-              </div>
-            </template>
-          </div>
+        <td colspan="7">
+          <x-component template="comments-row" x-data="{ tool: 'primer' }"></x-component>
         </td>
       </tr>
 
@@ -64,29 +43,11 @@
         <td>Yes</td>
       </tr>
       <tr rowspan="2" class="comment-row">
-        <!-- @click syntax not being recognized as HTML -->
-        <td colspan="7"
-          x-data="toolReactions('polaris')"
-          x-show="!isLoading"
-          x-on:click="openCommentsPanel('polaris')"
-          x-on:click.stop
-        >
-          <div class="flex">
-            <!-- Comments Count -->
-            <div class="flex items-center space-x-8">
-              <span class="font-semibold space-x-1">💬</span>
-              <span x-text="commentsCount || 0" class="text-gray-700"></span>
-            </div>
-            <!-- Emoji Reactions -->
-            <template x-for="(data, name) in reactions">
-              <div class="flex items-center space-x-4">
-                <span x-text="getEmoji(name)" class="space-x-1"></span>
-                <span x-text="data.count || 0" class="text-gray-700"></span>
-              </div>
-            </template>
-          </div>
+        <td colspan="7">
+          <x-component template="comments-row" x-data="{ tool: 'polaris' }"></x-component>
         </td>
       </tr>
+
     </tbody>
   </table>
 
@@ -102,11 +63,58 @@
     <a
       x-on:click="closeCommentsPanel()"
       class="absolute top-4 right-4 text-gray-500 hover-underline hover-pointer"
-    >
-      X
-    </a>
+    >X</a>
 
     <h3><span x-text="selectedTool"></span></h3>
   </div>
-
 </section>
+
+<!-- NOTE for some reason, can't directly use <tr><td> as template -->
+<template id="comments-row">
+  <!-- @click syntax not being recognized as HTML -->
+  <div class="flex"
+    x-data="toolReactions(tool)"
+    x-show="!isLoading"
+    x-on:click="openCommentsPanel(tool)"
+    x-on:click.stop
+  >
+    <!-- NOTE inline style since component in shadow root and global ones dont apply here -->
+    <style>
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .space-x-1 {
+        margin-right: 0.25rem;
+      }
+
+      .space-x-4 {
+        margin-right: 1rem;
+      }
+
+      .space-x-8 {
+        margin-right: 2rem;
+      }
+    </style>
+
+    <!-- Comments Count -->
+    <div class="flex items-center space-x-8">
+      <span class="font-semibold space-x-1">💬</span>
+      <span x-text="commentsCount || 0" class="text-gray-700"></span>
+    </div>
+    <!-- Emoji Reactions -->
+    <template x-for="(data, name) in reactions">
+      <div
+        class="flex items-center space-x-4"
+        x-show="data.count > 0"
+      >
+        <span x-text="getEmoji(name)" class="space-x-1"></span>
+        <span x-text="data.count || 0" class="text-gray-700"></span>
+      </div>
+    </template>
+  </div>
+</template>
