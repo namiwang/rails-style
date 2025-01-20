@@ -1,9 +1,8 @@
-<section x-data="commentsPanel()">
-  <table>
+<section x-data="commentsPanel()" style="overflow-x: auto;">
+  <table style="white-space: nowrap; margin-bottom: 0;">
     <thead>
       <tr>
         <th>Name</th>
-        <th>Links</th>
         <th>Batteries</th>
         <th>Integration</th>
         <th>Styling</th>
@@ -13,41 +12,25 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td rowspan="2">Primer Design System</td>
-        <td><a href="https://primer.style/">Website</a>, <a href="https://github.com/primer/css">GitHub</a></td>
-        <td>Full design system, CSS framework, Icons, Components</td>
-        <td>
-          React<br>
-          ViewComponent
-        </td>
-        <td></td>
-        <td>React</td>
-        <td>Open Source</td>
-        <td>Yes</td>
-      </tr>
-      <tr rowspan="2" class="comment-row">
-        <td colspan="7">
-          <x-component template="comments-row" x-data="{ tool: 'primer' }"></x-component>
-        </td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">Polaris</td>
-        <td><a href="https://railsdesigner.com/">Website</a></td>
-        <td>UI Components, Templates, Design System</td>
-        <td>Ruby on Rails</td>
-        <td>CSS, TailwindCSS</td>
-        <td>Hotwire</td>
-        <td>Commercial</td>
-        <td>Yes</td>
-      </tr>
-      <tr rowspan="2" class="comment-row">
-        <td colspan="7">
-          <x-component template="comments-row" x-data="{ tool: 'polaris' }"></x-component>
-        </td>
-      </tr>
-
+      {% for tool in site.data.rails_ui_tools %}
+        <tr>
+          <td rowspan="2">
+            <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="{{ tool.name }}" width="16" height="16" style="vertical-align: text-top;"/>
+            <a href="{{ tool.url }}">{{ tool.name }}</a>
+          </td>
+          <td>{{ tool.batteries }}</td>
+          <td>{{ tool.rendering }}</td>
+          <td>{{ tool.styling }}</td>
+          <td>{{ tool.frontend }}</td>
+          <td>{{ tool.pricing }}</td>
+          <td>{{ tool.active }}</td>
+        </tr>
+        <tr rowspan="2" class="comment-row">
+          <td colspan="7">
+            <x-component template="comments-row" x-data="{ tool: '{{ tool.key }}' }"></x-component>
+          </td>
+        </tr>
+      {% endfor %}
     </tbody>
   </table>
 
@@ -78,7 +61,7 @@
     x-on:click="openCommentsPanel(tool)"
     x-on:click.stop
   >
-    <!-- NOTE inline style since component in shadow root and global ones dont apply here -->
+    <!-- NOTE inline style since component in shadow root and global styles dont apply -->
     <style>
       .flex {
         display: flex;

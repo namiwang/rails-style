@@ -10,25 +10,25 @@ _rails.style_ is a curated list of design systems, UI components, and frontend f
 
 <!-- TODO desc -->
 
-## Design Systems & Frameworks
+<!-- ## Rendering Solutions -->
 
-<!-- TODO component libraries -->
+## Rails-specific Design Systems & UI Frameworks
 
-<!-- view component -->
-<!-- phlex -->
-<!-- cells -->
-<!-- draper -->
+{% include rails_ui.html %}
 
-{% include table.html %}
+## Posts and Discussions
 
-## Rendering Solutions
-
-<footer>
-
-Made by [Nami W](https://nami.land) · [About Me & My Projects](https://nami.land/about) · [Buy me a coffee ☕️](https://buymeacoffee.com/namiw)
-
-</footer>
+<ul>
+{% for post in site.data.posts %}
+  <li>
+    {% include link_preview.html url=post %}
+  </li>
+{% endfor %}
+</ul>
 
 <script defer src="/assets/main.js"></script>
 <script defer src="https://unpkg.com/alpinejs-component@latest/dist/component.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+<!-- TODO comments panel performance (cache?) -->
+<!-- TODO git activity sparkline -->

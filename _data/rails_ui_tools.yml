@@ -1,0 +1,99 @@
+- key: primer
+  name: Primer
+  url: https://primer.style/
+  batteries: >
+    🗂️ Design system<br>
+    🎁 Components (~90)<br>
+    🎨 Icons (<a href="https://primer.style/foundations/icons">Octicons</a>)
+  rendering: ViewComponent
+  styling: Custom SCSS
+  frontend: >
+    React (react edition)<br>
+    Web Components (view_component edition)
+  pricing: Free
+  active: "Yes"
+
+- key: govuk
+  name: GOV.UK Components
+  url: https://govuk-components.netlify.app/
+  batteries: >
+    🗂️ Components (~30, including <a href="https://x-govuk.github.io/govuk-prototype-components/">prototype ones</a>)
+  rendering: ViewComponent
+  styling: Custom SCSS
+  frontend: "-"
+  pricing: Free
+  active: "Yes"
+
+- key: railsui
+  name: RailsUI
+  url: https://railsui.com/
+  batteries: >
+    🗂️ Components (~20 in free version)<br>
+    📄 Templates (4)
+  rendering: ERB layouts/partials
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Free
+  active: "Yes"
+
+- key: rails_designer
+  name: Rails Designer
+  url: https://railsdesigner.com/
+  batteries: >
+    🗂️ Components (~40)<br>
+    📄 Templates (1)
+  rendering: ViewComponent
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Paid
+  active: "Yes"
+
+- key: rubyui
+  name: RubyUI
+  url: https://rubyui.com/docs/introduction
+  batteries: ""
+  rendering: Phlex
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: ""
+  active: "Yes"
+
+- key: polaris
+  name: Polaris
+  url: "https://polaris.shopify.com/"
+  batteries: >
+    🗂️ Design system<br>
+    🎁 Components (~70)<br>
+    🎨 Icons
+  rendering: ViewComponent<br>(via <a href="https://github.com/baoagency/polaris_view_components">unofficial gem</a>)
+  styling: Custom SCSS
+  frontend: React (official)<br>Stimulus port (unofficial)
+  pricing: Free
+  active: "Yes"
+
+- key: zestui
+  name: ZestUI
+  url: https://zestui.com/
+  batteries: >
+    🗂️ Components (~20)
+  rendering: Phlex
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: $69 (with discount) one-time payment
+  active: Stalled
+
+- key: protos
+  name: Protos
+  url: https://protos.inhouse.work/
+  batteries: >
+    🗂️ Components (~20)
+  rendering: Phlex
+  styling: Tailwind CSS, daisyUI
+  frontend: "-"
+  active: "Yes"
+
+# TODO
+# shadcn.rails-components.com
+# https://github.com/aviflombaum/shadcn-rails
+
+# https://github.com/lazaronixon/css-zero
