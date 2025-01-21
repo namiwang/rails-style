@@ -1,0 +1,159 @@
+body > header > div.wrapper {
+  max-width: calc(1280px - 30px * 2);
+}
+
+body > main > div.wrapper {
+  max-width: calc(1280px - 30px * 2);
+}
+
+body > footer > div.wrapper {
+  max-width: calc(1280px - 30px * 2);
+}
+
+h2 { margin-top: 2rem; }
+
+table {
+  width: unset;
+  margin-bottom: 0;
+}
+
+[x-cloak] { display: none !important; }
+
+/* Comment Row */
+.comment-row {
+  margin-bottom: 1rem;
+}
+
+.comment-row:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Flexbox Utility Classes */
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-1 {
+  margin-right: 0.25rem;
+}
+
+.space-x-2 {
+  margin-right: 0.5rem;
+}
+
+.space-x-4 {
+  margin-right: 1rem;
+}
+
+.space-x-8 {
+  margin-right: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+/* Typography */
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-700 {
+  color: #4a4a4a;
+}
+
+.text-gray-500 {
+  color: #a0aec0;
+}
+
+/* offcanvas panel */
+
+/* Initial hidden state */
+.translate-x-full {
+  transform: translateX(100%); /* Move off-screen to the right */
+}
+
+/* Visible state */
+.translate-x-0 {
+  transform: translateX(0); /* Reset to visible position */
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Panel container styles */
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Default width for the panel */
+.w-128 {
+  width: 32rem; /* Default width */
+}
+
+/* For narrow screens, set max-width */
+@media (max-width: 768px) {
+  .w-128 {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 24rem; /* Maximum width */
+  }
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}

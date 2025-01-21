@@ -1,0 +1,142 @@
+- key: govuk
+  name: GOV.UK
+  url: https://x-govuk.github.io/
+  batteries: >
+    🗂️ Design system<br>
+    🎁 Components (~40)<br>
+    📄 Prototype Kit<br>
+    🖼️ Figma Library<br>
+    💎 Ruby Gem
+  rendering: ViewComponent<br>
+    Form Builder
+  styling: Custom
+  frontend: "-"
+  pricing: Free
+  active: Active
+
+- key: polaris
+  name: Polaris
+  url: "https://polaris.shopify.com/"
+  batteries: >
+    🗂️ Design system<br>
+    🎁 Components (~70)<br>
+    🎨 Icons<br>
+    🖼️ Figma Library<br>
+    💎 Ruby Gem (<a href="https://github.com/baoagency/polaris_view_components">unofficial</a>)
+  rendering: ViewComponent<br>(unofficial)
+  styling: Custom
+  frontend: React (official)<br>Stimulus port (unofficial)
+  pricing: Free
+  active: Active
+
+- key: primer
+  name: Primer
+  url: https://primer.style/
+  batteries: >
+    🗂️ Design system<br>
+    🎁 Components (~90)<br>
+    🎨 Icons (<a href="https://primer.style/foundations/icons">Octicons</a>)<br>
+    🖼️ Figma Library<br>
+    💎 Ruby Gem
+  rendering: ViewComponent
+  styling: Custom
+  frontend: >
+    React<br>(react edition)<br><br>
+    Web Components<br>(view_component edition)
+  pricing: Free
+  active: Active
+
+- key: csszero
+  name: CSS Zero
+  url: https://github.com/lazaronixon/css-zero
+  batteries: >
+    🗂️ Components (~30)<br>
+    📄 Templates (few)<br>
+    💎 Ruby Gem
+  rendering: ERB
+  styling: Custom
+  frontend: Stimulus
+  pricing: Free
+  active: Active
+
+- key: protos
+  name: Protos
+  url: https://github.com/inhouse-work/protos/
+  batteries: >
+    🗂️ Components (~20)<br>
+    💎 Ruby Gem
+  rendering: Phlex
+  styling: >
+    Tailwind CSS<br>
+    daisyUI
+  frontend: "-"
+  pricing: Free
+  active: Active
+
+- key: railsdesigner
+  name: Rails Designer
+  url: https://railsdesigner.com/
+  batteries: >
+    🗂️ Components (~40)<br>
+    📄 Templates (few)<br>
+    💎 Ruby Gem
+  rendering: ViewComponent
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Paid<br>
+    (starting $99)
+  active: Active
+
+- key: railsui
+  name: RailsUI
+  url: https://railsui.com/
+  batteries: >
+    🗂️ Components (~20 in free version)<br>
+    📄 Templates (~20 pages x ~3 themes)<br>
+    💎 Ruby Gem
+  rendering: ERB
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Freemium<br>
+    (starting $299/year)
+  active: Active
+
+- key: rubyui
+  name: RubyUI<br>
+    (formerly Phlex UI)
+  url: https://rubyui.com/
+  batteries: >
+    🗂️ Components (~40)<br>
+    💎 Ruby Gem
+  rendering: Phlex
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Free
+  active: Active
+
+- key: shadcnonrails
+  name: shadcn/ui on Rails
+  url: https://github.com/aviflombaum/shadcn-rails
+  batteries: >
+    🗂️ Components (~30)<br>
+    💎 Ruby Gem
+  rendering: ERB + helpers<br>
+    Form Builder
+  styling: Tailwind CSS<br>
+    shandcn/ui
+  frontend: Stimulus
+  pricing: Free
+  active: Active
+
+- key: zestui
+  name: ZestUI
+  url: https://zestui.com/
+  batteries: >
+    🗂️ Components (~20)<br>
+    💎 Ruby Gem
+  rendering: Phlex
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Paid<br>
+    (starting $69)
+  active: Paused

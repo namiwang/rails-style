@@ -1,0 +1,103 @@
+<section x-data="commentsPanel()" style="overflow-x: auto;">
+  <table style="white-space: nowrap;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Batteries</th>
+        <th>Rendering</th>
+        <th>Styling</th>
+        <th>Frontend <br>Framework</th>
+        <th>Pricing</th>
+        <th>Activity <br>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tool in site.data.rails_ui_tools %}
+        <tr>
+          <td rowspan="2">
+            <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="{{ tool.name }}" width="16" height="16" style="vertical-align: text-top;"/>
+            <a href="{{ tool.url }}">{{ tool.name }}</a>
+          </td>
+          <td>{{ tool.batteries }}</td>
+          <td>{{ tool.rendering }}</td>
+          <td>{{ tool.styling }}</td>
+          <td>{{ tool.frontend }}</td>
+          <td>{{ tool.pricing }}</td>
+          <td>{{ tool.active }}</td>
+        </tr>
+        <tr rowspan="2" class="comment-row">
+          <td colspan="7">
+            <x-component template="comments-row" x-data="{ tool: '{{ tool.key }}' }"></x-component>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- Offcanvas Side Panel -->
+  <div
+    id="comments-panel"
+    class="fixed top-0 right-0 h-full w-128 p-4 bg-white shadow-lg transition-transform"
+    x-bind:class="isPanelOpen ? 'translate-x-0' : 'translate-x-full'"
+    x-on:click.away="closeCommentsPanel()"
+    x-on:click.stop
+    x-cloak
+  >
+    <a
+      x-on:click="closeCommentsPanel()"
+      class="absolute top-4 right-4 text-gray-500 hover-underline hover-pointer"
+    >X</a>
+
+    <h3><span x-text="selectedTool"></span></h3>
+  </div>
+</section>
+
+<!-- NOTE for some reason, can't directly use <tr><td> as template -->
+<template id="comments-row">
+  <!-- @click syntax not being recognized as HTML -->
+  <div class="flex"
+    x-data="toolReactions(tool)"
+    x-show="!isLoading"
+    x-on:click="openCommentsPanel(tool)"
+    x-on:click.stop
+  >
+    <!-- NOTE inline style since component in shadow root and global styles dont apply -->
+    <style>
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .space-x-1 {
+        margin-right: 0.25rem;
+      }
+
+      .space-x-4 {
+        margin-right: 1rem;
+      }
+
+      .space-x-8 {
+        margin-right: 2rem;
+      }
+    </style>
+
+    <!-- Comments Count -->
+    <div class="flex items-center space-x-8">
+      <span class="font-semibold space-x-1">💬</span>
+      <span x-text="commentsCount || 0" class="text-gray-700"></span>
+    </div>
+    <!-- Emoji Reactions -->
+    <template x-for="(data, name) in reactions">
+      <div
+        class="flex items-center space-x-4"
+        x-show="data.count > 0"
+      >
+        <span x-text="getEmoji(name)" class="space-x-1"></span>
+        <span x-text="data.count || 0" class="text-gray-700"></span>
+      </div>
+    </template>
+  </div>
+</template>
