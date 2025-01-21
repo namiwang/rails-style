@@ -12,6 +12,11 @@ body > footer > div.wrapper {
 
 h2 { margin-top: 2rem; }
 
+table {
+  width: unset;
+  margin-bottom: 0;
+}
+
 [x-cloak] { display: none !important; }
 
 /* Comment Row */
