@@ -1,6 +1,14 @@
 const TOOL_DISCUSSION_IDS = {
   primer: 2,
   polaris: 3,
+  govuk: 5,
+  csszero: 6,
+  railsdesigner: 7,
+  railsui: 8,
+  rubyui: 9,
+  zestui: 10,
+  protos: 11,
+  shadcnonrails: 12,
 }
 
 const EMOJI_MAP = {

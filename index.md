@@ -6,7 +6,7 @@ layout: home
   {% include assets/main.css %}
 </style>
 
-_rails.style_ is a curated resource hub for Rails developers. It currently focuses on UI related libraires, and will expand to cover other topics (background jobs, administration) in the future.
+_rails.style_ is a curated resource hub for Rails developers. It currently focuses on UI related libraires, and will expand to cover other topics (background jobs, administration, mailers, newsletters, etc.) in the future.
 
 ## Rendering Solutions
 
@@ -16,10 +16,10 @@ Early Rails applications use ERB (or others like Haml) partials and bloated help
 | ---------------------------------------------------------- | ------------- | --------------------- | ------------------- | --------------------------- |
 | ERB Partial                                                | Bad           | Template              | HTML                | 3                           |
 | [ViewComponent](https://viewcomponent.org/)                | Not Bad       | Ruby Class + Template | HTML                | 6                           |
+| [Cells](https://github.com/trailblazer/cells)              | Not Bad       | Ruby Class + Template | HTML                | 2                           |
+| [Hanami::View](https://github.com/hanami/view)             | Not Bad       | Ruby Class + Template | HTML, JSON, XML     | -                           |
 | [Phlex](https://www.phlex.fun/)                            | Not Bad       | Pure Ruby             | HTML (more planned) | 8                           |
 | [Papercraft](https://github.com/digital-fabric/papercraft) | Not Bad       | Pure Ruby             | HTML, JSON, XML     | 9                           |
-| [Cells](https://github.com/trailblazer/cells)              | Not Bad       | Ruby Class + Template | HTML                | 2                           |
-| [Hanami::View](https://github.com/hanami/view)             | Not Bad       | Ruby Class + Template | HTML, JSON, XML     |                             |
 
 \* performance data source: [view-layer-benchmarks](https://github.com/KonnorRogers/view-layer-benchmarks)
 

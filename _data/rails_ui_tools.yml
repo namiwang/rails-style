@@ -59,6 +59,34 @@
   pricing: Free
   active: Active
 
+- key: protos
+  name: Protos
+  url: https://github.com/inhouse-work/protos/
+  batteries: >
+    🗂️ Components (~20)<br>
+    💎 Ruby Gem
+  rendering: Phlex
+  styling: >
+    Tailwind CSS<br>
+    daisyUI
+  frontend: "-"
+  pricing: Free
+  active: Active
+
+- key: railsdesigner
+  name: Rails Designer
+  url: https://railsdesigner.com/
+  batteries: >
+    🗂️ Components (~40)<br>
+    📄 Templates (few)<br>
+    💎 Ruby Gem
+  rendering: ViewComponent
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Paid<br>
+    (starting $99)
+  active: Active
+
 - key: railsui
   name: RailsUI
   url: https://railsui.com/
@@ -73,20 +101,6 @@
     (starting $299/year)
   active: Active
 
-- key: rails_designer
-  name: Rails Designer
-  url: https://railsdesigner.com/
-  batteries: >
-    🗂️ Components (~40)<br>
-    📄 Templates (few)<br>
-    💎 Ruby Gem
-  rendering: ViewComponent
-  styling: Tailwind CSS
-  frontend: Stimulus
-  pricing: Paid<br>
-    (starting $99)
-  active: Active
-
 - key: rubyui
   name: RubyUI<br>
     (formerly Phlex UI)
@@ -96,6 +110,20 @@
     💎 Ruby Gem
   rendering: Phlex
   styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Free
+  active: Active
+
+- key: shadcnonrails
+  name: shadcn/ui on Rails
+  url: https://github.com/aviflombaum/shadcn-rails
+  batteries: >
+    🗂️ Components (~30)<br>
+    💎 Ruby Gem
+  rendering: ERB + helpers<br>
+    Form Builder
+  styling: Tailwind CSS<br>
+    shandcn/ui
   frontend: Stimulus
   pricing: Free
   active: Active
@@ -112,31 +140,3 @@
   pricing: Paid<br>
     (starting $69)
   active: Paused
-
-- key: protos
-  name: Protos
-  url: https://github.com/inhouse-work/protos/
-  batteries: >
-    🗂️ Components (~20)<br>
-    💎 Ruby Gem
-  rendering: Phlex
-  styling: >
-    Tailwind CSS<br>
-    daisyUI
-  frontend: "-"
-  pricing: Free
-  active: Active
-
-- key: shadcn_rails
-  name: shadcn/ui on Rails
-  url: https://github.com/aviflombaum/shadcn-rails
-  batteries: >
-    🗂️ Components (~30)<br>
-    💎 Ruby Gem
-  rendering: ERB + helpers<br>
-    Form Builder
-  styling: Tailwind CSS<br>
-    shandcn/ui
-  frontend: Stimulus
-  pricing: Free
-  active: Active
