@@ -38,3 +38,4 @@ gem "jekyll-remote-theme"
 # required by Jekyll, no longer included by default in ruby 3.4.0
 gem 'csv'
 gem 'logger'
+gem 'base64'
