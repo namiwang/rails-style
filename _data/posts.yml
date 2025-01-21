@@ -1,3 +1,6 @@
-- https://discuss.rubyonrails.org/t/do-basecamp-hey-use-viewcomponents/83270
-- https://viewcomponent.org/resources.html
-- https://stereobooster.com/posts/rails-ui-components/
+- url: https://viewcomponent.org/resources.html
+  title: Resources | ViewComponent
+- url: https://discuss.rubyonrails.org/t/do-basecamp-hey-use-viewcomponents/83270
+  title: Do Basecamp/Hey use ViewComponents? - rubyonrails-talk - Ruby on Rails Discussions
+- url: https://stereobooster.com/posts/rails-ui-components/
+  title: Rails UI components · stereobooster

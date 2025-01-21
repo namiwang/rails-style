@@ -32,7 +32,9 @@ Early Rails applications use ERB (or others like Haml) partials and bloated help
 <ul>
 {% for post in site.data.posts %}
   <li>
-    {% include link_preview.html url=post %}
+    <a href="{{ post.url }}" title="{{ post.title | escape }}">
+      {{ post.title | escape }}
+    </a>
   </li>
 {% endfor %}
 </ul>
