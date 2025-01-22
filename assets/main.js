@@ -68,9 +68,11 @@ function commentsPanel() {
   return {
     isPanelOpen: false,
     selectedTool: null,
-    openCommentsPanel(tool) {
+    selectedToolDisplayName: null,
+    openCommentsPanel(tool, name) {
       this.isPanelOpen = true
       this.selectedTool = tool
+      this.selectedToolDisplayName = name
 
       this.$nextTick(() => {
         const script = document.createElement('script')
@@ -101,6 +103,7 @@ function commentsPanel() {
     closeCommentsPanel() {
       this.isPanelOpen = false
       this.selectedTool = null
+      this.selectedToolDisplayName = null
     },
   }
 }

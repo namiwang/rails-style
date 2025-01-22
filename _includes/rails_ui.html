@@ -27,7 +27,7 @@
         </tr>
         <tr rowspan="2" class="comment-row">
           <td colspan="7">
-            <x-component template="comments-row" x-data="{ tool: '{{ tool.key }}' }"></x-component>
+            <x-component template="comments-row" x-data="{ tool: '{{ tool.key }}', toolDisplayName: '{{ tool.name }}' }"></x-component>
           </td>
         </tr>
       {% endfor %}
@@ -48,7 +48,7 @@
       class="absolute top-4 right-4 text-gray-500 hover-underline hover-pointer"
     >X</a>
 
-    <h3><span x-text="selectedTool"></span></h3>
+    <h3><span x-text="selectedToolDisplayName"></span></h3>
   </div>
 </section>
 
@@ -58,7 +58,7 @@
   <div class="flex"
     x-data="toolReactions(tool)"
     x-show="!isLoading"
-    x-on:click="openCommentsPanel(tool)"
+    x-on:click="openCommentsPanel(tool, toolDisplayName)"
     x-on:click.stop
   >
     <!-- NOTE inline style since component in shadow root and global styles dont apply -->
