@@ -34,7 +34,7 @@ function toolReactions(tool) {
         const discussionId = TOOL_DISCUSSION_IDS[tool]
         if (!discussionId) return
 
-        const url = `https://giscus.app/api/discussions?repo=namiwang%2Frails-style&number=${discussionId}&strict=true&last=15`
+        const url = `https://reactions.api.rails.style/?discussionId=${discussionId}`
         const response = await fetch(url)
         const data = await response.json()
 
