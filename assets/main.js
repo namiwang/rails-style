@@ -9,6 +9,7 @@ const TOOL_DISCUSSION_IDS = {
   zestui: 10,
   protos: 11,
   shadcnonrails: 12,
+  railsbootui: 14
 }
 
 const EMOJI_MAP = {

@@ -73,6 +73,20 @@
   pricing: Free
   active: Active
 
+- key: railsbootui
+  name: RailsbootUI
+  url: https://railsbootui.com/
+  batteries: >
+    🗂️ Components (Free) (~20)<br>
+    🗂️ Components (Pro) (~20)<br>
+    📄 Templates (few)<br>
+  rendering: ViewComponent
+  styling: Bootstrap
+  frontend: "-"
+  pricing: Freemium<br>
+    (starting $99)
+  active: Active
+
 - key: railsdesigner
   name: Rails Designer
   url: https://railsdesigner.com/
@@ -91,7 +105,7 @@
   name: RailsUI
   url: https://railsui.com/
   batteries: >
-    🗂️ Components (~20 in free version)<br>
+    🗂️ Components (Free) (~20)<br>
     📄 Templates (~20 pages x ~3 themes)<br>
     💎 Ruby Gem
   rendering: ERB
