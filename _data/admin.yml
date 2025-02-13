@@ -1,0 +1,70 @@
+- name: "ActiveAdmin"
+  key: "activeadmin"
+  url: "https://activeadmin.info/"
+  features: > 
+    rich DSL (via Arbre)<br>
+    exports (CSV/XML/JSON)<br>
+    custom actions via a rich DSL
+  pricing: "Free"
+  maintenance: "Active"
+- name: "RailsAdmin"
+  key: "railsadmin"
+  url: "https://github.com/sferik/rails_admin"
+  features: > 
+    Auto-detects models/associations<br>
+  pricing: "Free, Open-source"
+  maintenance: "Low Activity"
+- name: "Administrate"
+  key: "administrate"
+  url: "https://github.com/thoughtbot/administrate"
+  features: > 
+    Scaffold-based (no DSL)<br>
+    Customizable dashboards<br>
+    non-intrusive controllers/views<br>
+    conventional Rails overrides
+  pricing: "Free, Open-source"
+  maintenance: "Active"
+- name: "Avo"
+  key: "avo"
+  url: "https://avohq.io/"
+  features: > 
+    Config-driven with a light DSL<br>
+    Advanced field types<br>
+    inline editing<br>
+    flexible dashboards<br>
+    ejection of default views for custom work<br>
+    Hotwire/Stimulus based frontend
+  pricing: >
+    Freemium<br>
+    Pro (starting $500/year/project)
+  maintenance: "Active"
+- name: "Trestle"
+  key: "trestle"
+  url: "https://trestle.io/"
+  features: > 
+    Ruby-centric DSL
+  pricing: "Free, Open-source"
+  maintenance: "Low Activity"
+- name: "ActiveScaffold"
+  key: "activescaffold"
+  url: "https://github.com/activescaffold/active_scaffold"
+  features: > 
+    Auto-CRUD scaffold<br>
+    Automatic CRUD generation<br>
+    inline editing<br>
+    CSV export
+  pricing: "Free, Open-source"
+  maintenance: "Actively"
+- name: "Motor Admin"
+  key: "motoradmin"
+  url: "https://www.getmotoradmin.com/ruby-on-rails"
+  features: > 
+    UI-configurable<br>
+    low-code<br>
+    GUI form builder<br>
+    real-time configuration via UI<br>
+    export options
+  pricing: >
+    Freemium<br>
+    Pro (starting unknown)
+  maintenance: "Low Activity"

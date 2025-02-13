@@ -1,0 +1,24 @@
+<html>
+  <table>
+    <thead>
+      <tr>
+        <th>Library</th>
+        <th>Encapsulation</th>
+        <th>Templating</th>
+        <th>Output</th>
+        <th>Performance<sup>*</sup></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lib in site.data.rendering_libs.libs %}
+      <tr>
+        <td>{% if lib.link %}<a href="{{ lib.link }}">{{ lib.name }}</a>{% else %}{{ lib.name }}{% endif %}</td>
+        <td>{{ lib.encapsulation }}</td>
+        <td>{{ lib.templating }}</td>
+        <td>{{ lib.output }}</td>
+        <td>{{ lib.performance }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</html>

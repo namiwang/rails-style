@@ -1,4 +1,36 @@
-# <!-- view component -->
-# <!-- phlex -->
-# <!-- cells -->
-# <!-- draper -->
+libs:
+  - name: "ERB Partial"
+    encapsulation: "Bad"
+    templating: "Template"
+    output: "HTML"
+    performance: 3
+  - name: "ViewComponent"
+    link: "https://viewcomponent.org/"
+    encapsulation: "Not Bad"
+    templating: "Ruby Class + Template"
+    output: "HTML"
+    performance: 6
+  - name: "Cells"
+    link: "https://github.com/trailblazer/cells"
+    encapsulation: "Not Bad"
+    templating: "Ruby Class + Template"
+    output: "HTML"
+    performance: 2
+  - name: "Hanami::View"
+    link: "https://github.com/hanami/view"
+    encapsulation: "Not Bad"
+    templating: "Ruby Class + Template"
+    output: "HTML, JSON, XML"
+    performance: "-"
+  - name: "Phlex"
+    link: "https://www.phlex.fun/"
+    encapsulation: "Not Bad"
+    templating: "Pure Ruby"
+    output: "HTML (more planned)"
+    performance: 8
+  - name: "Papercraft"
+    link: "https://github.com/digital-fabric/papercraft"
+    encapsulation: "Not Bad"
+    templating: "Pure Ruby"
+    output: "HTML, JSON, XML"
+    performance: 9
