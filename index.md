@@ -39,9 +39,4 @@ Early Rails applications use ERB (or others like Haml) partials and bloated help
 {% endfor %}
 </ul>
 
-<script defer src="/assets/main.js"></script>
-<script defer src="https://unpkg.com/alpinejs-component@latest/dist/component.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
-
-<!-- TODO comments panel performance (cache?) -->
 <!-- TODO git activity sparkline -->
