@@ -6,6 +6,8 @@ layout: home
   {% include assets/main.css %}
 </style>
 
+<span id="main-content"></span>
+
 _rails.style_ is a curated resource hub for Rails developers. It currently focuses on UI related libraries, and will expand to cover other topics (background jobs, administration, mailers, newsletters, etc.) in the future.
 
 ## Rendering Solutions

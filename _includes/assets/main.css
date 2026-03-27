@@ -1,18 +1,28 @@
-body > header > div.wrapper {
+/* Wider content area */
+.wrapper {
   max-width: calc(1280px - 30px * 2);
 }
 
-body > main > div.wrapper {
-  max-width: calc(1280px - 30px * 2);
+/* Remove Minima's thick top border */
+.site-header {
+  border-top: none;
 }
 
-body > footer > div.wrapper {
-  max-width: calc(1280px - 30px * 2);
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--minima-brand-color);
+  color: #fff;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  font-size: 0.875rem;
 }
 
-h2 { margin-top: 2rem; }
-
-table {
-  width: unset;
-  margin-bottom: 0;
+.skip-link:focus {
+  top: 0;
+  color: #fff;
 }
