@@ -229,6 +229,11 @@ html {
   color: var(--rs-warning);
 }
 
+.badge-maintenance {
+  background: var(--rs-warning-subtle);
+  color: var(--rs-warning);
+}
+
 .badge-enc-weak {
   background: var(--rs-warning-subtle);
   color: var(--rs-warning);
