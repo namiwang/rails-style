@@ -1,156 +1,183 @@
 - key: govuk
   name: GOV.UK
   url: https://x-govuk.github.io/
-  batteries: >
-    🗂️ Design system<br>
-    🎁 Components (~40)<br>
-    📄 Prototype Kit<br>
-    🖼️ Figma Library<br>
-    💎 Ruby Gem
-  rendering: ViewComponent<br>
-    Form Builder
+  components: "~40"
+  design_system: true
+  templates: Prototype Kit
+  figma: true
+  icons: false
+  gem: true
+  rendering: ViewComponent
+  form_builder: true
   styling: Custom
-  frontend: "-"
+  frontend: ""
   pricing: Free
-  active: Active
+  status: Active
 
 - key: polaris
   name: Polaris
-  url: "https://polaris.shopify.com/"
-  batteries: >
-    🗂️ Design system<br>
-    🎁 Components (~70)<br>
-    🎨 Icons<br>
-    🖼️ Figma Library<br>
-    💎 Ruby Gem (<a href="https://github.com/baoagency/polaris_view_components">unofficial</a>)
-  rendering: ViewComponent<br>(unofficial)
+  url: https://polaris.shopify.com/
+  components: "~70"
+  design_system: true
+  templates: false
+  figma: true
+  icons: true
+  gem: true
+  gem_note: unofficial
+  gem_url: https://github.com/baoagency/polaris_view_components
+  rendering: ViewComponent
+  rendering_note: unofficial
+  form_builder: false
   styling: Custom
-  frontend: React (official)<br>Stimulus port (unofficial)
+  frontend: "React (official), Stimulus (unofficial)"
   pricing: Free
-  active: Active
+  status: Active
 
 - key: primer
   name: Primer
   url: https://primer.style/
-  batteries: >
-    🗂️ Design system<br>
-    🎁 Components (~90)<br>
-    🎨 Icons (<a href="https://primer.style/foundations/icons">Octicons</a>)<br>
-    🖼️ Figma Library<br>
-    💎 Ruby Gem
+  components: "~90"
+  design_system: true
+  templates: false
+  figma: true
+  icons: true
+  icons_name: Octicons
+  icons_url: https://primer.style/foundations/icons
+  gem: true
   rendering: ViewComponent
+  form_builder: false
   styling: Custom
-  frontend: >
-    React<br>(react edition)<br><br>
-    Web Components<br>(view_component edition)
+  frontend: "React, Web Components"
   pricing: Free
-  active: Active
+  status: Active
 
 - key: csszero
   name: CSS Zero
   url: https://github.com/lazaronixon/css-zero
-  batteries: >
-    🗂️ Components (~30)<br>
-    📄 Templates (few)<br>
-    💎 Ruby Gem
+  components: "~30"
+  design_system: false
+  templates: few
+  figma: false
+  icons: false
+  gem: true
   rendering: ERB
+  form_builder: false
   styling: Custom
   frontend: Stimulus
   pricing: Free
-  active: Active
+  status: Active
 
 - key: protos
   name: Protos
   url: https://github.com/inhouse-work/protos/
-  batteries: >
-    🗂️ Components (~20)<br>
-    💎 Ruby Gem
+  components: "~20"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
   rendering: Phlex
-  styling: >
-    Tailwind CSS<br>
-    daisyUI
-  frontend: "-"
+  form_builder: false
+  styling: "Tailwind CSS, daisyUI"
+  frontend: ""
   pricing: Free
-  active: Active
+  status: Active
 
 - key: railsbootui
   name: RailsbootUI
   url: https://railsbootui.com/
-  batteries: >
-    🗂️ Components (Free) (~20)<br>
-    🗂️ Components (Pro) (~20)<br>
-    📄 Templates (few)<br>
+  components: "~40"
+  components_note: "~20 free, ~20 pro"
+  design_system: false
+  templates: few
+  figma: false
+  icons: false
+  gem: false
   rendering: ViewComponent
+  form_builder: false
   styling: Bootstrap
-  frontend: "-"
-  pricing: Freemium<br>
-    (starting $99)
-  active: Active
+  frontend: ""
+  pricing: "Freemium ($99+)"
+  status: Active
 
 - key: railsdesigner
   name: Rails Designer
   url: https://railsdesigner.com/
-  batteries: >
-    🗂️ Components (~40)<br>
-    📄 Templates (few)<br>
-    💎 Ruby Gem
+  components: "~40"
+  design_system: false
+  templates: few
+  figma: false
+  icons: false
+  gem: true
   rendering: ViewComponent
+  form_builder: false
   styling: Tailwind CSS
   frontend: Stimulus
-  pricing: Paid<br>
-    (starting $99)
-  active: Active
+  pricing: "Paid ($99+)"
+  status: Active
 
 - key: railsui
   name: RailsUI
   url: https://railsui.com/
-  batteries: >
-    🗂️ Components (Free) (~20)<br>
-    📄 Templates (~20 pages x ~3 themes)<br>
-    💎 Ruby Gem
+  components: "~20"
+  components_note: free
+  design_system: false
+  templates: "~20 pages x ~3 themes"
+  figma: false
+  icons: false
+  gem: true
   rendering: ERB
+  form_builder: false
   styling: Tailwind CSS
   frontend: Stimulus
-  pricing: Freemium<br>
-    (starting $299/year)
-  active: Active
+  pricing: "Freemium ($299/yr+)"
+  status: Active
 
 - key: rubyui
-  name: RubyUI<br>
-    (formerly Phlex UI)
+  name: RubyUI
   url: https://rubyui.com/
-  batteries: >
-    🗂️ Components (~40)<br>
-    💎 Ruby Gem
+  note: formerly Phlex UI
+  components: "~40"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
   rendering: Phlex
+  form_builder: false
   styling: Tailwind CSS
   frontend: Stimulus
   pricing: Free
-  active: Active
+  status: Active
 
 - key: shadcnonrails
   name: shadcn/ui on Rails
   url: https://github.com/aviflombaum/shadcn-rails
-  batteries: >
-    🗂️ Components (~30)<br>
-    💎 Ruby Gem
-  rendering: ERB + helpers<br>
-    Form Builder
-  styling: Tailwind CSS<br>
-    shandcn/ui
+  components: "~30"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
+  rendering: ERB + helpers
+  form_builder: true
+  styling: "Tailwind CSS, shadcn/ui"
   frontend: Stimulus
   pricing: Free
-  active: Active
+  status: Active
 
 - key: zestui
   name: ZestUI
   url: https://zestui.com/
-  batteries: >
-    🗂️ Components (~20)<br>
-    💎 Ruby Gem
+  components: "~20"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
   rendering: Phlex
+  form_builder: false
   styling: Tailwind CSS
   frontend: Stimulus
-  pricing: Paid<br>
-    (starting $69)
-  active: Paused
+  pricing: "Paid ($69+)"
+  status: Paused

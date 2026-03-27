@@ -1,0 +1,30 @@
+<div class="rendering-wrapper">
+  <table class="data-table" aria-label="Rendering solutions comparison">
+    <caption class="sr-only">Comparison of Rails view rendering solutions</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Encapsulation</th>
+        <th scope="col">Templating</th>
+        <th scope="col">Output</th>
+        <th scope="col">Performance*</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lib in site.data.rendering_libs %}
+      <tr>
+        <td>
+          {% if lib.url %}<a href="{{ lib.url }}">{{ lib.name }}</a>{% else %}{{ lib.name }}{% endif %}
+        </td>
+        <td>
+          <span class="badge badge-enc-{{ lib.encapsulation | downcase }}">{{ lib.encapsulation }}</span>
+        </td>
+        <td>{{ lib.templating }}</td>
+        <td>{{ lib.output }}</td>
+        <td>{{ lib.performance | default: "—" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="table-footnote">* Performance data: <a href="https://github.com/KonnorRogers/view-layer-benchmarks">view-layer-benchmarks</a></p>

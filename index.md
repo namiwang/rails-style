@@ -8,37 +8,39 @@ layout: home
 
 <span id="main-content"></span>
 
-_rails.style_ is a curated resource hub for Rails developers. It currently focuses on UI related libraries, and will expand to cover other topics (background jobs, administration, mailers, newsletters, etc.) in the future.
+<p class="site-description"><em>rails.style</em> is a curated resource hub for Rails developers. Compare UI frameworks, rendering solutions, and more — with honest data to help you choose.</p>
 
-## Rendering Solutions
+<nav class="category-nav" aria-label="Categories">
+  <a href="#ui-libraries">UI Libraries</a>
+  <a href="#rendering">Rendering</a>
+</nav>
 
-Early Rails applications use ERB (or others like Haml) partials and bloated helpers. Modern Rails projects often emphasizes encapsulation and component-based design. There's a few libraries to create reusable and testable UI components.
+<section class="category-section" id="ui-libraries" markdown="1">
 
-|                                                            | Encapsulation | **Templating**        | **Output**          | **Performance**<sup>*</sup> |
-| ---------------------------------------------------------- | ------------- | --------------------- | ------------------- | --------------------------- |
-| ERB Partial                                                | Bad           | Template              | HTML                | 3                           |
-| [ViewComponent](https://viewcomponent.org/)                | Not Bad       | Ruby Class + Template | HTML                | 6                           |
-| [Cells](https://github.com/trailblazer/cells)              | Not Bad       | Ruby Class + Template | HTML                | 2                           |
-| [Hanami::View](https://github.com/hanami/view)             | Not Bad       | Ruby Class + Template | HTML, JSON, XML     | -                           |
-| [Phlex](https://www.phlex.fun/)                            | Not Bad       | Pure Ruby             | HTML (more planned) | 8                           |
-| [Papercraft](https://github.com/digital-fabric/papercraft) | Not Bad       | Pure Ruby             | HTML, JSON, XML     | 9                           |
+## Design Systems & UI Libraries
 
-\* performance data source: [view-layer-benchmarks](https://github.com/KonnorRogers/view-layer-benchmarks)
-
-## Rails-specific Design Systems & UI Libraries
+<p class="section-intro">Rails-specific component libraries and design systems for building production interfaces.</p>
 
 {% include rails_ui.html %}
 
-## Posts and Discussions
+</section>
 
-<ul>
+<section class="category-section" id="rendering" markdown="1">
+
+## Rendering Solutions
+
+<p class="section-intro">Move beyond ERB partials with component-based architectures for reusable, testable UI.</p>
+
+{% include rendering.html %}
+
+### Further Reading
+
+<ul class="resource-list">
 {% for post in site.data.posts %}
   <li>
-    <a href="{{ post.url }}" title="{{ post.title | escape }}">
-      {{ post.title | escape }}
-    </a>
+    <a href="{{ post.url }}">{{ post.title | escape }}</a>
   </li>
 {% endfor %}
 </ul>
 
-<!-- TODO git activity sparkline -->
+</section>

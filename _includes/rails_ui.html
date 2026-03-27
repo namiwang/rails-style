@@ -1,31 +1,94 @@
-<section style="overflow-x: auto;">
-  <table style="white-space: nowrap;">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Batteries</th>
-        <th>Rendering</th>
-        <th>Styling</th>
-        <th>Frontend <br>Framework</th>
-        <th>Pricing</th>
-        <th>Activity <br>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for tool in site.data.rails_ui_tools %}
-        <tr>
-          <td>
-            <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="" width="16" height="16" style="vertical-align: text-top;"/>
-            <a href="{{ tool.url }}">{{ tool.name }}</a>
-          </td>
-          <td>{{ tool.batteries }}</td>
-          <td>{{ tool.rendering }}</td>
-          <td>{{ tool.styling }}</td>
-          <td>{{ tool.frontend }}</td>
-          <td>{{ tool.pricing }}</td>
-          <td>{{ tool.active }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</section>
+<!-- Desktop table -->
+<table class="data-table tools-table" aria-label="Rails UI Libraries Comparison">
+  <caption class="sr-only">Comparison of Rails-specific design systems and UI libraries</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Components</th>
+      <th scope="col">Rendering</th>
+      <th scope="col">Styling</th>
+      <th scope="col">Frontend</th>
+      <th scope="col">Pricing</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tool in site.data.rails_ui_tools %}
+    <tr>
+      <td>
+        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="" width="16" height="16" loading="lazy" class="tool-favicon" />
+        <a href="{{ tool.url }}" class="tool-name">{{ tool.name }}</a>
+        {% if tool.note %}<span class="tool-note">{{ tool.note }}</span>{% endif %}
+        <div class="tool-features">
+          {% if tool.design_system %}<span class="badge badge-feature">Design System</span>{% endif %}
+          {% if tool.figma %}<span class="badge badge-feature">Figma</span>{% endif %}
+          {% if tool.icons %}<span class="badge badge-feature">Icons{% if tool.icons_name %} ({{ tool.icons_name }}){% endif %}</span>{% endif %}
+          {% if tool.gem %}<span class="badge badge-feature">Gem{% if tool.gem_note %} · {{ tool.gem_note }}{% endif %}</span>{% endif %}
+          {% if tool.form_builder %}<span class="badge badge-feature">Form Builder</span>{% endif %}
+          {% if tool.templates %}<span class="badge badge-feature">Templates ({{ tool.templates }})</span>{% endif %}
+        </div>
+      </td>
+      <td>{{ tool.components }}{% if tool.components_note %} <span class="text-muted">({{ tool.components_note }})</span>{% endif %}</td>
+      <td>{{ tool.rendering }}{% if tool.rendering_note %} <span class="text-muted">({{ tool.rendering_note }})</span>{% endif %}</td>
+      <td>{{ tool.styling }}</td>
+      <td>{% if tool.frontend and tool.frontend != "" %}{{ tool.frontend }}{% else %}—{% endif %}</td>
+      <td>
+        {% assign pricing_lower = tool.pricing | downcase %}
+        <span class="badge {% if pricing_lower == 'free' %}badge-free{% elsif pricing_lower contains 'freemium' %}badge-freemium{% else %}badge-paid{% endif %}">{{ tool.pricing }}</span>
+      </td>
+      <td>
+        <span class="badge badge-{{ tool.status | downcase }}">{{ tool.status }}</span>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<!-- Mobile cards -->
+<div class="tools-cards" role="list" aria-label="Rails UI Libraries">
+  {% for tool in site.data.rails_ui_tools %}
+  <article class="tool-card" role="listitem">
+    <div class="tool-card-header">
+      <span>
+        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="" width="16" height="16" loading="lazy" class="tool-favicon" />
+        <a href="{{ tool.url }}" class="tool-name">{{ tool.name }}</a>
+      </span>
+      <span class="badge badge-{{ tool.status | downcase }}">{{ tool.status }}</span>
+    </div>
+    {% if tool.note %}<span class="tool-note">{{ tool.note }}</span>{% endif %}
+    <div class="tool-card-body">
+      <div class="tool-card-row">
+        <span class="tool-card-label">Components</span>
+        <span>{{ tool.components }}{% if tool.components_note %} ({{ tool.components_note }}){% endif %}</span>
+      </div>
+      <div class="tool-card-row">
+        <span class="tool-card-label">Rendering</span>
+        <span>{{ tool.rendering }}{% if tool.rendering_note %} ({{ tool.rendering_note }}){% endif %}</span>
+      </div>
+      <div class="tool-card-row">
+        <span class="tool-card-label">Styling</span>
+        <span>{{ tool.styling }}</span>
+      </div>
+      {% if tool.frontend and tool.frontend != "" %}
+      <div class="tool-card-row">
+        <span class="tool-card-label">Frontend</span>
+        <span>{{ tool.frontend }}</span>
+      </div>
+      {% endif %}
+      <div class="tool-card-row">
+        <span class="tool-card-label">Pricing</span>
+        {% assign pricing_lower = tool.pricing | downcase %}
+        <span class="badge {% if pricing_lower == 'free' %}badge-free{% elsif pricing_lower contains 'freemium' %}badge-freemium{% else %}badge-paid{% endif %}">{{ tool.pricing }}</span>
+      </div>
+    </div>
+    <div class="tool-card-features">
+      {% if tool.design_system %}<span class="badge badge-feature">Design System</span>{% endif %}
+      {% if tool.figma %}<span class="badge badge-feature">Figma</span>{% endif %}
+      {% if tool.icons %}<span class="badge badge-feature">Icons</span>{% endif %}
+      {% if tool.gem %}<span class="badge badge-feature">Gem{% if tool.gem_note %} · {{ tool.gem_note }}{% endif %}</span>{% endif %}
+      {% if tool.form_builder %}<span class="badge badge-feature">Form Builder</span>{% endif %}
+      {% if tool.templates %}<span class="badge badge-feature">Templates</span>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

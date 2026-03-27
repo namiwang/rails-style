@@ -1,4 +1,39 @@
-# <!-- view component -->
-# <!-- phlex -->
-# <!-- cells -->
-# <!-- draper -->
+- name: ERB Partial
+  encapsulation: Weak
+  templating: Template
+  output: HTML
+  performance: 3
+
+- name: ViewComponent
+  url: https://viewcomponent.org/
+  encapsulation: Moderate
+  templating: "Ruby Class + Template"
+  output: HTML
+  performance: 6
+
+- name: Cells
+  url: https://github.com/trailblazer/cells
+  encapsulation: Moderate
+  templating: "Ruby Class + Template"
+  output: HTML
+  performance: 2
+
+- name: "Hanami::View"
+  url: https://github.com/hanami/view
+  encapsulation: Moderate
+  templating: "Ruby Class + Template"
+  output: "HTML, JSON, XML"
+
+- name: Phlex
+  url: https://www.phlex.fun/
+  encapsulation: Moderate
+  templating: Pure Ruby
+  output: "HTML (more planned)"
+  performance: 8
+
+- name: Papercraft
+  url: https://github.com/digital-fabric/papercraft
+  encapsulation: Moderate
+  templating: Pure Ruby
+  output: "HTML, JSON, XML"
+  performance: 9
