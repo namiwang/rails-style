@@ -1,6 +1,6 @@
 - key: govuk
   name: GOV.UK
-  url: https://x-govuk.github.io/
+  url: https://x-govuk.org/
   components: "~40"
   design_system: true
   templates: Prototype Kit
@@ -29,36 +29,36 @@
   rendering_note: unofficial
   form_builder: false
   styling: Custom
-  frontend: "React (official), Stimulus (unofficial)"
+  frontend: "Web Components (official), Stimulus (unofficial)"
   pricing: Free
   status: Active
 
 - key: primer
-  name: Primer
+  name: Primer (ViewComponents)
   url: https://primer.style/
-  components: "~90"
+  components: "~60"
   design_system: true
   templates: false
   figma: true
   icons: true
   icons_name: Octicons
-  icons_url: https://primer.style/foundations/icons
+  icons_url: https://primer.style/octicons
   gem: true
   rendering: ViewComponent
   form_builder: false
   styling: Custom
-  frontend: "React, Web Components"
+  frontend: ""
   pricing: Free
   status: Maintenance
 
 - key: csszero
   name: CSS Zero
   url: https://github.com/lazaronixon/css-zero
-  components: "~30"
+  components: "~60"
   design_system: false
   templates: few
   figma: false
-  icons: false
+  icons: true
   gem: true
   rendering: ERB
   form_builder: false
@@ -70,7 +70,7 @@
 - key: protos
   name: Protos
   url: https://github.com/inhouse-work/protos/
-  components: "~20"
+  components: "~27"
   design_system: false
   templates: false
   figma: false
@@ -79,22 +79,22 @@
   rendering: Phlex
   form_builder: false
   styling: "Tailwind CSS, daisyUI"
-  frontend: ""
+  frontend: Stimulus
   pricing: Free
   status: Active
 
 - key: railsbootui
   name: RailsbootUI
   url: https://railsbootui.com/
-  components: "~40"
-  components_note: "~20 free, ~20 pro"
+  components: "~44"
+  components_note: "22 free, 22 pro"
   design_system: false
   templates: few
   figma: false
   icons: false
   gem: false
   rendering: ViewComponent
-  form_builder: false
+  form_builder: true
   styling: Bootstrap
   frontend: ""
   pricing: "Freemium ($99+)"
@@ -103,14 +103,14 @@
 - key: railsdesigner
   name: Rails Designer
   url: https://railsdesigner.com/
-  components: "~40"
+  components: "200+"
   design_system: false
   templates: few
   figma: false
-  icons: false
+  icons: true
   gem: true
   rendering: ViewComponent
-  form_builder: false
+  form_builder: true
   styling: Tailwind CSS
   frontend: Stimulus
   pricing: "Paid ($99+)"
@@ -119,15 +119,15 @@
 - key: railsui
   name: RailsUI
   url: https://railsui.com/
-  components: "~20"
-  components_note: free
+  components: "~150"
+  components_note: 40+ per theme
   design_system: false
-  templates: "~20 pages x ~3 themes"
+  templates: "~20 pages x 8 themes"
   figma: false
   icons: false
   gem: true
   rendering: ERB
-  form_builder: false
+  form_builder: true
   styling: Tailwind CSS
   frontend: Stimulus
   pricing: "Freemium ($299/yr+)"
@@ -137,7 +137,7 @@
   name: RubyUI
   url: https://rubyui.com/
   note: formerly Phlex UI
-  components: "~40"
+  components: "~44"
   design_system: false
   templates: false
   figma: false
@@ -153,7 +153,7 @@
 - key: shadcnonrails
   name: shadcn/ui on Rails
   url: https://github.com/aviflombaum/shadcn-rails
-  components: "~30"
+  components: "~33"
   design_system: false
   templates: false
   figma: false
@@ -164,19 +164,19 @@
   styling: "Tailwind CSS, shadcn/ui"
   frontend: Stimulus
   pricing: Free
-  status: Active
+  status: Maintenance
 
 - key: zestui
   name: ZestUI
   url: https://zestui.com/
-  components: "~20"
+  components: "~21"
   design_system: false
   templates: false
   figma: false
   icons: false
   gem: true
   rendering: Phlex
-  form_builder: false
+  form_builder: true
   styling: Tailwind CSS
   frontend: Stimulus
   pricing: "Paid ($69+)"
