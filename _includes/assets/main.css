@@ -11,6 +11,8 @@
   --rs-success-subtle: #dafbe1;
   --rs-warning: #9a6700;
   --rs-warning-subtle: #fff8c5;
+  --rs-info: #0550ae;
+  --rs-info-subtle: #ddf4ff;
   --rs-neutral: #656d76;
   --rs-neutral-subtle: #f3f4f6;
   --rs-border: #d1d9e0;
@@ -27,6 +29,8 @@
     --rs-success-subtle: #0b3218;
     --rs-warning: #f0b030;
     --rs-warning-subtle: #3a2509;
+    --rs-info: #58a6ff;
+    --rs-info-subtle: #0d2240;
     --rs-neutral: #9ca3af;
     --rs-neutral-subtle: #24262a;
     --rs-border: #373e47;
@@ -242,6 +246,11 @@ html {
 .badge-enc-moderate {
   background: var(--rs-success-subtle);
   color: var(--rs-success);
+}
+
+.badge-enc-strong {
+  background: var(--rs-info-subtle);
+  color: var(--rs-info);
 }
 
 /* --- Feature Badges Container --- */

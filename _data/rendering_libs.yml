@@ -6,27 +6,27 @@
 
 - name: ViewComponent
   url: https://viewcomponent.org/
-  encapsulation: Moderate
+  encapsulation: Strong
   templating: "Ruby Class + Template"
   output: HTML
   performance: 6
 
 - name: Cells
   url: https://github.com/trailblazer/cells
-  encapsulation: Moderate
+  encapsulation: Strong
   templating: "Ruby Class + Template"
   output: HTML
   performance: 2
 
 - name: "Hanami::View"
   url: https://github.com/hanami/view
-  encapsulation: Moderate
+  encapsulation: Strong
   templating: "Ruby Class + Template"
   output: "HTML, JSON, XML"
 
 - name: Phlex
   url: https://www.phlex.fun/
-  encapsulation: Moderate
+  encapsulation: Strong
   templating: Pure Ruby
   output: "HTML (more planned)"
   performance: 8
