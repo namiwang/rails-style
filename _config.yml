@@ -22,10 +22,9 @@ title: rails.style
 author:
   name: Nami W
   email: me@nami.land
-tagline: A curated resource hub for Rails developers.
+tagline: A Curated Directory of Rails Tools & Libraries
 description: >- # this means to ignore newlines until "baseurl:"
-  rails.style is a curated resource hub for Rails developers. 
-  It features collections of Rails UI frameworks, component libraries and resources to help you build better Rails applications.
+  A curated directory of Rails tools for UI, admin panels, background jobs, databases and more. Side-by-side comparisons, related discussions and posts.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rails.style" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -39,6 +38,7 @@ plugins:
   - jekyll-remote-theme
   # - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.

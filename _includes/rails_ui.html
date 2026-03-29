@@ -16,7 +16,7 @@
     {% for tool in site.data.rails_ui_tools %}
     <tr>
       <td>
-        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="" width="16" height="16" loading="lazy" class="tool-favicon" />
+        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="{{ tool.name }} logo" width="16" height="16" loading="lazy" class="tool-favicon" />
         <a href="{{ tool.url }}" class="tool-name">{{ tool.name }}</a>
         {% if tool.note %}<span class="tool-note">{{ tool.note }}</span>{% endif %}
         <div class="tool-features">
@@ -50,7 +50,7 @@
   <article class="tool-card" role="listitem">
     <div class="tool-card-header">
       <span>
-        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="" width="16" height="16" loading="lazy" class="tool-favicon" />
+        <img src="https://www.google.com/s2/favicons?sz=16&domain_url={{ tool.url }}" alt="{{ tool.name }} logo" width="16" height="16" loading="lazy" class="tool-favicon" />
         <a href="{{ tool.url }}" class="tool-name">{{ tool.name }}</a>
       </span>
       <span class="badge badge-{{ tool.status | downcase }}">{{ tool.status }}</span>
