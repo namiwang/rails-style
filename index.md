@@ -41,7 +41,7 @@ layout: home
 <ul class="resource-list">
 {% for post in site.data.posts %}
   <li>
-    <a href="{{ post.url }}">{{ post.title | escape }}</a>
+    <a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a>
   </li>
 {% endfor %}
 </ul>

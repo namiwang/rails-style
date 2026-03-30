@@ -32,31 +32,33 @@ If the specified project is not found, tell the user and list available entries.
 
 ## 3. Fetch Live Data
 
-For each entry being validated, use `fetch_webpage` to gather fresh data from the same four sources used by the `fetch-project` skill. Use the entry's `url` field and known URL patterns to locate sources.
+For each entry being validated, use `fetch_webpage` to gather fresh data from the same four sources used by the `fetch-project` skill. Use the entry's `links` fields to locate sources.
 
 ### 3.1 GitHub Repository
 
-Fetch the GitHub repository page. If the `url` field points to GitHub, use it directly. Otherwise, search for a GitHub link on the project's website or try common patterns (`https://github.com/{likely-owner}/{project-name}`).
+Use `links.github` if available. If not, try to find the repository by searching the project's homepage for a GitHub link.
 
-Extract:
+Fetch the GitHub repository page. Extract:
 - **Stars** — current stargazer count
 - **Last commit date** — to re-evaluate `status`
 - **License** — verify it hasn't changed
 - **Archived status** — if the repo is archived, status should be `Maintenance` or `Paused`
 - **Description** — compare with `name` for accuracy
+- **Homepage URL** — compare with `links.home`
 
 ### 3.2 Official Website / Documentation
 
-Fetch the project's official URL from the entry's `url` field.
+Fetch the URLs from `links.home`, `links.docs`, `links.pricing`, and `links.demo`.
 
 Check for:
-- **Site still live** — does the URL return a valid page? Flag if the site is down, redirects elsewhere, or shows a parked domain
+- **Links still live** — does each URL return a valid page? Flag any dead, redirected, or parked domain links as 🔴 Error
 - **Component count** — recount from the docs/components page; compare with stored `components` value
 - **Pricing changes** — compare current pricing with stored `pricing` field
 - **Feature changes** — check if `figma`, `templates`, `icons`, `design_system`, or `form_builder` status has changed
 - **Rendering approach** — verify the `rendering` field still matches
 - **Styling approach** — verify the `styling` field still matches
 - **Frontend JS** — verify the `frontend` field still matches
+- **Discoverable links** — look for additional link types (github, docs, pricing, demo) not yet in the entry. If found, flag as 🟡 Stale (missing link that could be added).
 
 ### 3.3 RubyGems
 
@@ -79,8 +81,8 @@ For each field in the local entry, compare against the fetched data. Classify ea
 
 | Severity | Meaning | Examples |
 |---|---|---|
-| 🔴 **Error** | Data is factually wrong | Wrong rendering approach, wrong pricing tier, site URL is dead |
-| 🟡 **Stale** | Data was correct but is now outdated | Component count changed significantly, status should change, new pricing |
+| 🔴 **Error** | Data is factually wrong or a link is dead | Wrong rendering approach, wrong pricing tier, dead URL in `links.*` |
+| 🟡 **Stale** | Data was correct but is now outdated | Component count changed significantly, status should change, new pricing, discoverable link missing from `links` |
 | 🔵 **Info** | Minor or cosmetic, not urgent | Star count changed, new gem version, minor wording |
 
 ### Status Re-evaluation
@@ -111,8 +113,13 @@ Refer to `_data/STATUS.md` for the full criteria definition.
 
 | Field | Validation method |
 |---|---|
-| `url` | Fetch the URL — is it reachable and not redirected to an unrelated domain? |
-| `components` | Recount from docs; flag if the stored count differs by more than 20%. **Count unique component types, not theme variants.** If a project offers the same component (e.g. Button, Card, Modal) restyled across multiple themes, count it once. Marketing copy like "150+ components" may be inflated by counting per-theme duplicates — always verify by deduplicating across themes. |
+| `links.home` | Fetch the URL — is it reachable and not redirected to an unrelated domain? |
+| `links.github` | Fetch the URL — does the repo still exist? Is it archived? |
+| `links.docs` | Fetch the URL — is it reachable? Does it still contain documentation? |
+| `links.pricing` | Fetch the URL — is it reachable? Does pricing info match the `pricing` field? |
+| `links.demo` | Fetch the URL — is it reachable? Does it still show a demo? |
+| `links` (missing) | Scan the homepage for discoverable links (github, docs, pricing, demo) not yet in the entry |
+| `components` | Recount from docs; flag if the stored count differs by more than 20%. **Count unique component types, not theme variants.** If a project offers the same component (e.g. Button, Card, Modal) restyled across multiple themes, count it once — do not inflate the number with per-theme duplicates. Marketing copy like "150+ components" may be inflated — always verify by deduplicating across themes. |
 | `design_system` | Check if a design system has been added or removed |
 | `templates` | Check current template offering |
 | `figma` | Look for Figma links on the site |
@@ -129,7 +136,10 @@ Refer to `_data/STATUS.md` for the full criteria definition.
 
 | Field | Validation method |
 |---|---|
-| `url` | Fetch the URL — is it reachable? |
+| `links.home` | Fetch the URL — is it reachable? |
+| `links.github` | Fetch the URL — does the repo still exist? |
+| `links.docs` | Fetch the URL — is it reachable? |
+| `links` (missing) | Scan for discoverable links not yet in the entry |
 | `encapsulation` | Verify from docs or source |
 | `templating` | Verify approach hasn't changed |
 | `output` | Check if supported output formats changed |
@@ -150,10 +160,11 @@ For a single project:
 **Sources checked:** GitHub ✓ | Website ✓ | RubyGems ✓ | LibHunt ✗
 
 ### 🔴 Errors (must fix)
+- `links.home`: https://old-url.com is dead (404)
 - `pricing`: Local says "Free" → website now shows "$49+" (Freemium)
-- `url`: https://old-url.com redirects to https://new-url.com
 
 ### 🟡 Stale (should update)
+- `links` (missing): GitHub repo found at https://github.com/owner/repo — add `links.github`
 - `components`: Local says "~30" → docs now show ~45 components
 - `status`: Local says "Active" → last commit was 14 months ago (should be "Paused")
 
@@ -164,6 +175,8 @@ For a single project:
 - rendering: Phlex ✓
 - styling: Tailwind CSS ✓
 - gem: true ✓
+- links.home: reachable ✓
+- links.github: reachable ✓
 ```
 
 For multiple projects, show a summary table first:
@@ -188,7 +201,7 @@ If the user confirms:
 
 1. Read the target `_data/*.yml` file
 2. Update only the fields that were flagged as 🔴 Error or 🟡 Stale
-3. Preserve existing formatting (2-space indentation, field order, quoting style)
+3. Preserve existing formatting (2-space indentation, field order, quoting style; 4-space indentation for `links` values)
 4. Show a diff of the changes before writing
 
 **Do not** auto-fix 🔵 Info items unless the user explicitly requests it.
@@ -198,7 +211,3 @@ If the user confirms:
 After fixes are applied, tell the user:
 
 > Updated `_data/{file}.yml`. Run `bundle exec jekyll serve` to verify the changes render correctly.
-
-If no issues were found:
-
-> All entries in `_data/{file}.yml` are up to date. No changes needed.

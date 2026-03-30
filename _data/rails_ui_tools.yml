@@ -1,6 +1,9 @@
 - key: govuk
   name: GOV.UK
-  url: https://x-govuk.org/
+  links:
+    home: https://x-govuk.org/
+    github: https://github.com/x-govuk/govuk-components
+    docs: https://govuk-components.x-govuk.org/
   components: "~21"
   design_system: true
   templates: Prototype Kit
@@ -16,7 +19,11 @@
 
 - key: polaris
   name: Polaris
-  url: https://shopify.dev/docs/api/app-home/polaris-web-components
+  links:
+    home: https://polaris.shopify.com/
+    github: https://github.com/baoagency/polaris_view_components
+    docs: https://shopify.dev/docs/api/app-home/polaris-web-components
+    demo: https://polarisviewcomponents.org/
   components: "~77"
   design_system: true
   templates: false
@@ -24,7 +31,6 @@
   icons: true
   gem: true
   gem_note: unofficial
-  gem_url: https://github.com/baoagency/polaris_view_components
   rendering: ViewComponent
   rendering_note: unofficial
   form_builder: false
@@ -34,15 +40,18 @@
   status: Active
 
 - key: primer
-  name: Primer (ViewComponents)
-  url: https://primer.style/
+  name: Primer
+  note: "ViewComponent, not React"
+  links:
+    home: https://primer.style/
+    github: https://github.com/primer/view_components
+    docs: https://primer.style/components
   components: "~60"
   design_system: true
   templates: false
   figma: true
   icons: true
   icons_name: Octicons
-  icons_url: https://primer.style/octicons
   gem: true
   rendering: ViewComponent
   form_builder: false
@@ -53,7 +62,9 @@
 
 - key: csszero
   name: CSS Zero
-  url: https://github.com/lazaronixon/css-zero
+  links:
+    home: https://csszero.lazaronixon.com/
+    github: https://github.com/lazaronixon/css-zero
   components: "~60"
   design_system: false
   templates: few
@@ -69,7 +80,9 @@
 
 - key: protos
   name: Protos
-  url: https://github.com/inhouse-work/protos/
+  links:
+    home: https://protos.inhouse.work/
+    github: https://github.com/inhouse-work/protos/
   components: "~30"
   design_system: false
   templates: false
@@ -85,7 +98,11 @@
 
 - key: railsbootui
   name: RailsbootUI
-  url: https://railsbootui.com/
+  links:
+    home: https://railsbootui.com/
+    docs: https://railsbootui.com/docs/introduction
+    pricing: https://railsbootui.com/pricing
+    demo: https://railsbootui.com/components
   components: "~44"
   components_note: "22 free, 22 pro"
   design_system: false
@@ -102,7 +119,10 @@
 
 - key: railsdesigner
   name: Rails Designer
-  url: https://railsdesigner.com/
+  links:
+    home: https://railsdesigner.com/
+    docs: https://railsdesigner.com/components/
+    demo: https://railsdesigner.com/components/
   components: "200+"
   design_system: false
   templates: few
@@ -118,7 +138,12 @@
 
 - key: railsui
   name: RailsUI
-  url: https://railsui.com/
+  links:
+    home: https://railsui.com/
+    github: https://github.com/getrailsui/railsui
+    docs: https://railsui.com/docs
+    pricing: https://railsui.com/pricing
+    demo: https://railsui.com/themes
   components: "~40"
   components_note: 40+ per theme
   design_system: false
@@ -135,7 +160,10 @@
 
 - key: rubyui
   name: RubyUI
-  url: https://rubyui.com/
+  links:
+    home: https://rubyui.com/
+    github: https://github.com/PhlexUI/phlex_ui
+    docs: https://rubyui.com/docs/introduction
   note: formerly Phlex UI
   components: "~44"
   design_system: false
@@ -152,7 +180,9 @@
 
 - key: shadcnonrails
   name: shadcn/ui on Rails
-  url: https://github.com/aviflombaum/shadcn-rails
+  links:
+    home: https://github.com/aviflombaum/shadcn-rails
+    github: https://github.com/aviflombaum/shadcn-rails
   components: "~37"
   design_system: false
   templates: false
@@ -168,7 +198,9 @@
 
 - key: zestui
   name: ZestUI
-  url: https://zestui.com/
+  links:
+    home: https://zestui.com/
+    docs: https://zestui.com/components/button
   components: "~21"
   design_system: false
   templates: false
@@ -184,7 +216,10 @@
 
 - key: instrumental
   name: Instrumental
-  url: https://instrumental.dev/
+  links:
+    home: https://instrumental.dev/
+    docs: https://instrumental.dev/docs
+    pricing: https://instrumental.dev/pricing
   components: "~33"
   components_note: "25+ UI, 8+ app"
   design_system: false
@@ -202,7 +237,9 @@
 
 - key: maquina
   name: Maquina Components
-  url: https://github.com/maquina-app/maquina_components
+  links:
+    home: https://github.com/maquina-app/maquina_components
+    github: https://github.com/maquina-app/maquina_components
   components: "~22"
   design_system: false
   templates: false
@@ -218,7 +255,11 @@
 
 - key: nitrokit
   name: Nitro Kit
-  url: https://nitrokit.dev/
+  links:
+    home: https://nitrokit.dev/
+    github: https://github.com/nicoroeser/nitrokit
+    docs: https://nitrokit.dev/getting_started
+    pricing: https://nitrokit.dev/premium
   components: "~30"
   design_system: false
   templates: false
@@ -234,7 +275,11 @@
 
 - key: railsblocks
   name: Rails Blocks
-  url: https://railsblocks.com/
+  links:
+    home: https://railsblocks.com/
+    docs: https://railsblocks.com/docs/installation
+    pricing: https://railsblocks.com/pro
+    demo: https://railsblocks.com/
   components: "~50"
   components_note: "280+ variants across ~50 component types"
   design_system: false
@@ -251,7 +296,11 @@
 
 - key: railskit
   name: RailsKit
-  url: https://railskit.io/
+  links:
+    home: https://railskit.io/
+    docs: https://railskit.io/en/docs/getting-started
+    pricing: https://railskit.io/en/pricing
+    demo: https://railskit.io/en/components
   components: "~78"
   design_system: false
   templates: false

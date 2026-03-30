@@ -164,6 +164,10 @@ html {
   vertical-align: top;
 }
 
+.tools-table td:first-child {
+  min-width: 180px;
+}
+
 .data-table tbody tr:last-child td {
   border-bottom: none;
 }
@@ -181,6 +185,10 @@ html {
 /* --- Tool Name --- */
 .tool-name {
   font-weight: 600;
+  color: var(--minima-link-base-color);
+}
+
+.tool-name:visited {
   color: var(--minima-link-base-color);
 }
 
@@ -238,6 +246,11 @@ html {
   color: var(--rs-warning);
 }
 
+.badge-unknown {
+  background: var(--rs-neutral-subtle);
+  color: var(--rs-neutral);
+}
+
 .badge-enc-weak {
   background: var(--rs-warning-subtle);
   color: var(--rs-warning);
@@ -253,12 +266,66 @@ html {
   color: var(--rs-info);
 }
 
+/* --- Tool Header (name + link icons on one line) --- */
+.tool-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+/* --- Tool Links --- */
+.tool-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  margin-left: 4px;
+}
+
+.tool-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--rs-neutral);
+  text-decoration: none;
+  border-radius: var(--rs-radius-sm);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.tool-link:hover {
+  color: var(--rs-accent);
+  background: var(--rs-accent-subtle);
+  text-decoration: none;
+}
+
+.tool-link:visited {
+  color: var(--rs-neutral);
+}
+
+.tool-link:visited:hover {
+  color: var(--rs-accent);
+}
+
+.tool-link svg {
+  display: block;
+}
+
+.tool-link-inline {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  margin-left: 6px;
+  vertical-align: -2px;
+}
+
 /* --- Feature Badges Container --- */
 .tool-features {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 /* --- Text Helpers --- */

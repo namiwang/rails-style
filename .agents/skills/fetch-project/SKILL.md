@@ -39,6 +39,7 @@ Fetch the GitHub repository page to extract:
 - **Last commit date** — to determine activity/status
 - **License** — open source license type
 - **Topics/tags** — often reveal rendering approach, styling, etc.
+- **Homepage URL** — the "website" link shown in the repo sidebar (use this for `links.home` if it exists)
 
 URL pattern: `https://github.com/{owner}/{repo}`
 
@@ -51,6 +52,11 @@ Fetch the project's official website or documentation site to extract:
 - **Styling approach** — Tailwind CSS, Bootstrap, Custom CSS, etc.
 - **Frontend JS** — Stimulus, React, none, etc.
 - **Pricing model** — Free, Freemium, Paid (with price if shown)
+
+Also discover additional link targets:
+- **Docs URL** — look for a "Docs", "Documentation", "Guide", or "API" link (only if it points to a different domain or path than the homepage)
+- **Pricing URL** — look for a "Pricing", "Plans", or "Buy" link
+- **Demo URL** — look for a "Demo", "Playground", "Preview", or "Try it" link
 
 ### 3.3 RubyGems
 
@@ -86,7 +92,12 @@ Fields must appear in this exact order to match existing entries:
 ```yaml
 - key: {lowercase-alphanumeric-id}
   name: {Display Name}
-  url: {primary URL — official site preferred, GitHub if no site}
+  links:
+    home: {official website URL — required unless GitHub-only project}
+    github: {GitHub repository URL — omit if not on GitHub}
+    docs: {documentation URL — omit if same as home}
+    pricing: {pricing page URL — omit if free}
+    demo: {live demo/playground URL — omit if none}
   components: "{approximate count, prefix with ~ if estimated}"
   design_system: {true|false}
   templates: {true|false|"description if partial"}
@@ -101,20 +112,27 @@ Fields must appear in this exact order to match existing entries:
   status: {Active|Paused|Maintenance}
 ```
 
+**Links map rules:**
+- `links.home` — the primary URL visitors should see. Prefer the official website over GitHub. If the project is GitHub-only (no separate website), set `home` to the GitHub URL.
+- `links.github` — always the GitHub repository URL (e.g. `https://github.com/owner/repo`). Omit if the project has no public GitHub repo.
+- `links.docs` — only include if documentation lives at a different URL than `home`. Do not duplicate `home` here.
+- `links.pricing` — only include for Freemium or Paid projects. Omit for Free projects.
+- `links.demo` — only include if a live demo, playground, or preview page exists.
+- Include at least `home`. Omit any link type that doesn't apply.
+
 **Optional fields** — include only when applicable, placed directly after their parent field:
-- `note:` — general note about the project (after `name` or at end)
+- `note:` — general note about the project (after `links`)
 - `components_note:` — clarification on component count (after `components`)
-- `gem_note:` — e.g. "unofficial" (after `gem`)
-- `gem_url:` — URL to the gem if different from main URL (after `gem` or `gem_note`)
+- `gem_note:` — e.g. "unofficial", "private" (after `gem`)
 - `rendering_note:` — e.g. "unofficial" (after `rendering`)
 - `icons_name:` — name of the icon set (after `icons`)
-- `icons_url:` — URL to the icon set (after `icons_name`)
 
 **Field value guidelines:**
 
 | Field | How to determine |
 |---|---|
 | `key` | Lowercase, no spaces/hyphens if possible. E.g. "rubyui", "csszero", "railsdesigner" |
+| `links` | Discover all available link types during research. See links map rules above. |
 | `components` | Count **unique component types** from docs/components page. Prefix with `~`. Quote the value: `"~30"`. If the same component (e.g. Button, Card) appears across multiple themes, count it once — do not inflate the number with per-theme variants. |
 | `design_system` | `true` only if it offers a complete design system (tokens, guidelines, not just components) |
 | `templates` | `true` if full page templates, `false` if none, `"few"` or description if partial |
@@ -132,12 +150,19 @@ Fields must appear in this exact order to match existing entries:
 
 ```yaml
 - name: {Display Name}
-  url: {project URL}
-  encapsulation: {Weak|Moderate}
+  links:
+    home: {primary URL — official website or GitHub}
+    github: {GitHub repository URL — omit if not on GitHub}
+    docs: {documentation URL — omit if same as home}
+  encapsulation: {Weak|Moderate|Strong}
   templating: {Template|"Ruby Class + Template"|"Pure Ruby"|other}
   output: {HTML|"HTML, JSON, XML"|other}
   performance: {1-9 benchmark score, omit if unknown}
 ```
+
+**Links map rules for rendering_libs:**
+- Same rules as `rails_ui_tools` above, but only `home`, `github`, and `docs` link types apply (no pricing/demo for rendering solutions).
+- Entries without any links (e.g. ERB Partial) may omit the `links` field entirely.
 
 ### Schema: `form_builders` / `icon_libs`
 
@@ -156,7 +181,11 @@ Example:
 ```yaml
 - key: superui
   name: SuperUI
-  url: https://superui.dev/
+  links:
+    home: https://superui.dev/
+    github: https://github.com/superui/super_ui
+    docs: https://superui.dev/docs
+    pricing: https://superui.dev/pricing
   components: "~35"
   design_system: false
   templates: false
@@ -183,6 +212,7 @@ After user confirmation:
 
 **Formatting rules:**
 - Use 2-space indentation for fields under the list item marker (`- key:` → `  name:`)
+- Use 4-space indentation for link values under `links:` (`    home:`)
 - Quote string values that contain special characters, commas, or start with `~`
 - Boolean values are unquoted: `true`, `false`
 - Empty strings are quoted: `""`

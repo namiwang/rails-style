@@ -5,34 +5,47 @@
   performance: 3
 
 - name: ViewComponent
-  url: https://viewcomponent.org/
+  links:
+    home: https://viewcomponent.org/
+    github: https://github.com/viewcomponent/view_component
+    docs: https://viewcomponent.org/guide/
   encapsulation: Strong
   templating: "Ruby Class + Template"
   output: HTML
   performance: 6
 
 - name: Cells
-  url: https://github.com/trailblazer/cells
+  links:
+    home: https://github.com/trailblazer/cells
+    github: https://github.com/trailblazer/cells
+    docs: https://trailblazer.to/2.1/docs/cells/
   encapsulation: Strong
   templating: "Ruby Class + Template"
   output: HTML
   performance: 2
 
 - name: "Hanami::View"
-  url: https://github.com/hanami/hanami-view
+  links:
+    home: https://github.com/hanami/hanami-view
+    github: https://github.com/hanami/hanami-view
+    docs: https://guides.hanamirb.org/v2.2/views/overview/
   encapsulation: Strong
   templating: "Ruby Class + Template"
   output: "HTML, JSON, XML"
 
 - name: Phlex
-  url: https://www.phlex.fun/
+  links:
+    home: https://www.phlex.fun/
+    github: https://github.com/phlex-ruby/phlex
   encapsulation: Strong
   templating: Pure Ruby
   output: "HTML, SVG, CSV"
   performance: 8
 
 - name: Papercraft
-  url: https://github.com/digital-fabric/papercraft
+  links:
+    home: https://github.com/digital-fabric/papercraft
+    github: https://github.com/digital-fabric/papercraft
   encapsulation: Moderate
   templating: Pure Ruby
   output: "HTML, XML"
