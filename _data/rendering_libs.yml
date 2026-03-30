@@ -19,7 +19,7 @@
   performance: 2
 
 - name: "Hanami::View"
-  url: https://github.com/hanami/view
+  url: https://github.com/hanami/hanami-view
   encapsulation: Strong
   templating: "Ruby Class + Template"
   output: "HTML, JSON, XML"
@@ -28,12 +28,12 @@
   url: https://www.phlex.fun/
   encapsulation: Strong
   templating: Pure Ruby
-  output: "HTML (more planned)"
+  output: "HTML, SVG, CSV"
   performance: 8
 
 - name: Papercraft
   url: https://github.com/digital-fabric/papercraft
   encapsulation: Moderate
   templating: Pure Ruby
-  output: "HTML, JSON, XML"
+  output: "HTML, XML"
   performance: 9

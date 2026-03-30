@@ -1,7 +1,7 @@
 - key: govuk
   name: GOV.UK
   url: https://x-govuk.org/
-  components: "~40"
+  components: "~21"
   design_system: true
   templates: Prototype Kit
   figma: true
@@ -16,8 +16,8 @@
 
 - key: polaris
   name: Polaris
-  url: https://polaris.shopify.com/
-  components: "~70"
+  url: https://shopify.dev/docs/api/app-home/polaris-web-components
+  components: "~77"
   design_system: true
   templates: false
   figma: true
@@ -70,7 +70,7 @@
 - key: protos
   name: Protos
   url: https://github.com/inhouse-work/protos/
-  components: "~27"
+  components: "~30"
   design_system: false
   templates: false
   figma: false
@@ -98,7 +98,7 @@
   styling: Bootstrap
   frontend: ""
   pricing: "Freemium ($99+)"
-  status: Active
+  status: Paused
 
 - key: railsdesigner
   name: Rails Designer
@@ -119,12 +119,12 @@
 - key: railsui
   name: RailsUI
   url: https://railsui.com/
-  components: "~150"
+  components: "~40"
   components_note: 40+ per theme
   design_system: false
   templates: "~20 pages x 8 themes"
   figma: false
-  icons: false
+  icons: true
   gem: true
   rendering: ERB
   form_builder: true
@@ -153,13 +153,13 @@
 - key: shadcnonrails
   name: shadcn/ui on Rails
   url: https://github.com/aviflombaum/shadcn-rails
-  components: "~33"
+  components: "~37"
   design_system: false
   templates: false
   figma: false
   icons: false
   gem: true
-  rendering: ERB + helpers
+  rendering: ERB
   form_builder: true
   styling: "Tailwind CSS, shadcn/ui"
   frontend: Stimulus
@@ -173,11 +173,11 @@
   design_system: false
   templates: false
   figma: false
-  icons: false
+  icons: true
   gem: true
   rendering: Phlex
   form_builder: true
   styling: Tailwind CSS
   frontend: Stimulus
-  pricing: "Paid ($69+)"
-  status: Paused
+  pricing: Unknown
+  status: Unknown
