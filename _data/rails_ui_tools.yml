@@ -181,3 +181,86 @@
   frontend: Stimulus
   pricing: Unknown
   status: Unknown
+
+- key: instrumental
+  name: Instrumental
+  url: https://instrumental.dev/
+  components: "~33"
+  components_note: "25+ UI, 8+ app"
+  design_system: false
+  templates: true
+  figma: false
+  icons: false
+  gem: true
+  gem_note: private
+  rendering: ERB
+  form_builder: true
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: "Paid ($299+)"
+  status: Unknown
+
+- key: maquina
+  name: Maquina Components
+  url: https://github.com/maquina-app/maquina_components
+  components: "~22"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
+  rendering: ERB
+  form_builder: true
+  styling: "Tailwind CSS, shadcn/ui"
+  frontend: Stimulus
+  pricing: Free
+  status: Active
+
+- key: nitrokit
+  name: Nitro Kit
+  url: https://nitrokit.dev/
+  components: "~30"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: true
+  rendering: Phlex
+  form_builder: true
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: "Freemium ($99+)"
+  status: Active
+
+- key: railsblocks
+  name: Rails Blocks
+  url: https://railsblocks.com/
+  components: "~50"
+  components_note: "280+ variants across ~50 component types"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: false
+  rendering: ERB
+  form_builder: true
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: "Freemium ($229+)"
+  status: Unknown
+
+- key: railskit
+  name: RailsKit
+  url: https://railskit.io/
+  components: "~78"
+  design_system: false
+  templates: false
+  figma: false
+  icons: false
+  gem: false
+  rendering: "ERB, ViewComponent"
+  form_builder: true
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: "Freemium ($149+)"
+  status: Unknown
