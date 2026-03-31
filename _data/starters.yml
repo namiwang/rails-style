@@ -10,7 +10,7 @@
   frontend: Stimulus
   pricing: "Paid ($299+)"
   status: Active
-  note: Full-stack Rails SaaS starter with 25+ UI and 8+ app components
+  note: 25+ UI components, 8+ app components
 
 - key: bullet_train
   name: Bullet Train
@@ -25,7 +25,7 @@
   frontend: Stimulus
   pricing: Freemium
   status: Active
-  note: Open-source Rails SaaS framework with optional Pro add-ons
+  note: Open-source framework with optional Pro add-ons
 
 - key: jumpstart_pro
   name: Jumpstart Pro
@@ -39,4 +39,4 @@
   frontend: Hotwire
   pricing: "Paid ($249+)"
   status: Active
-  note: Popular Rails SaaS template by GoRails / Chris Oliver
+  note: By GoRails / Chris Oliver
