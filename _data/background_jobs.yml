@@ -1,0 +1,55 @@
+- key: sidekiq
+  name: Sidekiq
+  links:
+    home: https://sidekiq.org/
+    github: https://github.com/sidekiq/sidekiq
+    docs: https://github.com/sidekiq/sidekiq/wiki
+    pricing: https://sidekiq.org/products/enterprise.html
+  backend: Redis
+  web_ui: true
+  recurring: "Pro/Enterprise"
+  concurrency: Threaded
+  pricing: Freemium ($99+)
+  status: Active
+  note: Industry standard for background jobs in Ruby
+
+- key: solid_queue
+  name: Solid Queue
+  links:
+    home: https://github.com/rails/solid_queue
+    github: https://github.com/rails/solid_queue
+    docs: https://github.com/rails/solid_queue#readme
+  backend: Database (Active Record)
+  web_ui: "Mission Control"
+  recurring: true
+  concurrency: "Forked + Threaded"
+  pricing: Free
+  status: Active
+  note: Rails 8 default, database-backed queue with no external dependencies
+
+- key: good_job
+  name: GoodJob
+  links:
+    home: https://github.com/bensheldon/good_job
+    github: https://github.com/bensheldon/good_job
+    docs: https://github.com/bensheldon/good_job#readme
+  backend: PostgreSQL
+  web_ui: true
+  recurring: true
+  concurrency: "Threaded (via Concurrent Ruby)"
+  pricing: Free
+  status: Active
+  note: Postgres-based multithreaded Active Job backend
+
+- key: delayed_job
+  name: Delayed Job
+  links:
+    home: https://github.com/collectiveidea/delayed_job
+    github: https://github.com/collectiveidea/delayed_job
+  backend: Database (Active Record)
+  web_ui: false
+  recurring: false
+  concurrency: Single-threaded
+  pricing: Free
+  status: Maintenance
+  note: Original database-backed queue, simple and reliable

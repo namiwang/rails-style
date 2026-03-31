@@ -1,0 +1,50 @@
+- key: rubyonremote
+  name: RubyOnRemote
+  links:
+    home: https://rubyonremote.com/
+  type: Job Board
+  remote: true
+  rails_focused: true
+  pricing: "Paid (employers)"
+  note: Remote-only Ruby and Rails jobs
+
+- key: railsdevs
+  name: RailsDevs
+  links:
+    home: https://railsdevs.com/
+    github: https://github.com/joemasilotti/railsdevs.com
+  type: Reverse Job Board
+  remote: true
+  rails_focused: true
+  pricing: Freemium
+  note: Developers create profiles, businesses reach out
+
+- key: gorails_jobs
+  name: GoRails Jobs
+  links:
+    home: https://jobs.gorails.com/
+  type: Job Board
+  remote: "Mixed"
+  rails_focused: true
+  pricing: "Paid (employers)"
+  note: Job board by the GoRails community
+
+- key: rorjobs
+  name: Ruby on Rails Jobs
+  links:
+    home: https://www.rorjobs.com/
+  type: Job Board
+  remote: "Mixed"
+  rails_focused: true
+  pricing: "Paid (employers)"
+  note: Focused job board for Ruby on Rails positions
+
+- key: r_rails
+  name: r/rails
+  links:
+    home: https://www.reddit.com/r/rails/
+  type: Community
+  remote: "Mixed"
+  rails_focused: true
+  pricing: Free
+  note: "Weekly \"Hiring Wednesday\" thread for job posts"

@@ -42,12 +42,32 @@
   max-width: calc(1120px - 30px * 2);
 }
 
+.home > p:first-child {
+  margin: 0;
+  line-height: 0;
+}
+
+.home > h1.sr-only {
+  margin: 0;
+}
+
 .site-header {
   border-top: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 /* --- Skip Link --- */
@@ -77,9 +97,9 @@ html {
 
 /* --- Site Description --- */
 .site-description {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--rs-neutral);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   line-height: 1.5;
 }
 
@@ -87,11 +107,30 @@ html {
 .category-nav {
   display: flex;
   gap: 6px;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
+  margin-bottom: 28px;
+  padding: 10px 0;
   border-bottom: 1px solid var(--rs-border);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--minima-background-color, #fff);
+  transition: box-shadow 0.2s ease;
+}
+
+.category-nav.scrolled {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .category-nav {
+    background: var(--minima-background-color, #1e1e1e);
+  }
+
+  .category-nav.scrolled {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .category-nav a {
@@ -117,13 +156,31 @@ html {
   color: var(--minima-text-color);
 }
 
+.category-nav a.active {
+  background: var(--rs-accent);
+  color: #fff;
+}
+
+.category-nav a.active:hover {
+  background: var(--rs-accent-hover);
+}
+
+.category-nav a.active:visited {
+  color: #fff;
+}
+
 /* --- Section --- */
 .category-section {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
+  scroll-margin-top: 56px;
+}
+
+.category-section:last-of-type {
+  margin-bottom: 56px;
 }
 
 .category-section h2 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .category-section h3 {
@@ -134,7 +191,7 @@ html {
 
 .section-intro {
   color: var(--rs-neutral);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 0.95rem;
 }
 
@@ -194,9 +251,10 @@ html {
 
 .tool-note {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--rs-neutral);
-  margin-top: 1px;
+  margin-top: 2px;
+  line-height: 1.4;
 }
 
 /* --- Badges --- */
@@ -393,19 +451,14 @@ html {
 
 /* --- Resource List --- */
 .resource-list {
-  list-style: none;
-  margin-left: 0;
+  list-style: disc;
+  margin-left: 1.25rem;
   padding: 0;
 }
 
 .resource-list li {
-  padding: 5px 0;
-  border-bottom: 1px solid var(--rs-border);
+  padding: 4px 0;
   font-size: 0.9rem;
-}
-
-.resource-list li:last-child {
-  border-bottom: none;
 }
 
 /* --- Screen Reader Only --- */
@@ -419,6 +472,24 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* --- Contribute Link --- */
+.site-description a {
+  color: var(--rs-neutral);
+  text-decoration: underline;
+  text-decoration-color: var(--rs-border);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.site-description a:hover {
+  color: var(--rs-accent);
+  text-decoration-color: var(--rs-accent);
+}
+
+.site-description a:visited {
+  color: var(--rs-neutral);
 }
 
 /* --- Footer --- */

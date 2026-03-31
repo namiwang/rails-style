@@ -1,0 +1,64 @@
+- key: activeadmin
+  name: ActiveAdmin
+  links:
+    home: https://activeadmin.info/
+    github: https://github.com/activeadmin/activeadmin
+    docs: https://activeadmin.info/documentation.html
+  rendering: ERB
+  styling: Custom (Arbre DSL)
+  auth: Devise
+  dashboard: true
+  search: Ransack
+  api: false
+  pricing: Free
+  status: Active
+  note: DSL-driven admin framework, most established in the ecosystem
+
+- key: railsadmin
+  name: RailsAdmin
+  links:
+    home: https://github.com/railsadminteam/rails_admin
+    github: https://github.com/railsadminteam/rails_admin
+    docs: https://github.com/railsadminteam/rails_admin/wiki
+  rendering: ERB
+  styling: Bootstrap
+  auth: "Devise / Warden"
+  dashboard: true
+  search: Built-in
+  api: false
+  pricing: Free
+  status: Active
+  note: Auto-generated CRUD interface from models
+
+- key: avo
+  name: Avo
+  links:
+    home: https://avohq.io/
+    github: https://github.com/avo-hq/avo
+    docs: https://docs.avohq.io/
+    pricing: https://avohq.io/pricing
+  rendering: ViewComponent
+  styling: Tailwind CSS
+  auth: Pundit
+  dashboard: true
+  search: Ransack
+  api: true
+  pricing: Freemium ($99+)
+  status: Active
+  note: Modern admin with resource-based DSL and custom tools
+
+- key: administrate
+  name: Administrate
+  links:
+    home: https://administrate-demo.herokuapp.com/
+    github: https://github.com/thoughtbot/administrate
+    docs: https://administrate-demo.herokuapp.com/
+  rendering: ERB
+  styling: Custom
+  auth: Bring your own
+  dashboard: true
+  search: Built-in
+  api: false
+  pricing: Free
+  status: Maintenance
+  note: Convention-over-configuration admin by thoughtbot

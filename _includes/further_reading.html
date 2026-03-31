@@ -1,0 +1,12 @@
+{% assign filtered_posts = site.data.posts | where: "category", include.category %}
+{% if filtered_posts.size > 0 %}
+### Further Reading
+
+<ul class="resource-list">
+{% for post in filtered_posts %}
+  <li>
+    <a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endif %}

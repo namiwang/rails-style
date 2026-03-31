@@ -1,0 +1,42 @@
+- key: instrumental
+  name: Instrumental
+  links:
+    home: https://instrumental.dev/
+    docs: https://instrumental.dev/docs
+    pricing: https://instrumental.dev/pricing
+  type: SaaS Starter Kit
+  features: "UI components, Auth, Billing, Teams, Admin"
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: "Paid ($299+)"
+  status: Active
+  note: Full-stack Rails SaaS starter with 25+ UI and 8+ app components
+
+- key: bullet_train
+  name: Bullet Train
+  links:
+    home: https://bullettrain.co/
+    github: https://github.com/bullet-train-co/bullet_train
+    docs: https://bullettrain.co/docs
+    pricing: https://bullettrain.co/pricing
+  type: SaaS Framework
+  features: "Auth, Billing, Teams, Roles, API, Webhooks, OAuth, Super Scaffolding"
+  styling: Tailwind CSS
+  frontend: Stimulus
+  pricing: Freemium
+  status: Active
+  note: Open-source Rails SaaS framework with optional Pro add-ons
+
+- key: jumpstart_pro
+  name: Jumpstart Pro
+  links:
+    home: https://jumpstartrails.com/
+    docs: https://jumpstartrails.com/docs
+    pricing: https://jumpstartrails.com/#pricing
+  type: SaaS Starter Kit
+  features: "Auth, Billing, Teams, Admin, Notifications, API"
+  styling: Tailwind CSS
+  frontend: Hotwire
+  pricing: "Paid ($249+)"
+  status: Active
+  note: Popular Rails SaaS template by GoRails / Chris Oliver

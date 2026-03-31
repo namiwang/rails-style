@@ -1,0 +1,49 @@
+- key: ruby-openai
+  name: ruby-openai
+  links:
+    home: https://github.com/alexrudall/ruby-openai
+    github: https://github.com/alexrudall/ruby-openai
+  providers: "OpenAI, Azure OpenAI"
+  features: "Chat, Embeddings, Images, Audio, Assistants, Function calling"
+  rails_integration: false
+  pricing: Free
+  status: Active
+  note: Most popular Ruby client for OpenAI API
+
+- key: langchainrb
+  name: Langchain.rb
+  links:
+    home: https://github.com/patterns-ai-core/langchainrb
+    github: https://github.com/patterns-ai-core/langchainrb
+    docs: https://rubydoc.info/gems/langchainrb
+  providers: "OpenAI, Anthropic, Google, Cohere, Ollama"
+  features: "Chat, Embeddings, RAG, Agents, Function calling, Prompts"
+  rails_integration: true
+  pricing: Free
+  status: Active
+  note: Ruby port of LangChain with multi-provider support
+
+- key: raix
+  name: Raix
+  links:
+    home: https://github.com/OlympiaAI/raix
+    github: https://github.com/OlympiaAI/raix
+  providers: "OpenAI, OpenRouter (100+ models)"
+  features: "Chat, Function calling, Prompt declarations, Predicate loops"
+  rails_integration: true
+  pricing: Free
+  status: Active
+  note: Rails AI eXtensions — composable AI via concerns
+
+- key: sublayer
+  name: Sublayer
+  links:
+    home: https://sublayer.com/
+    github: https://github.com/sublayerapp/sublayer
+    docs: https://docs.sublayer.com/
+  providers: "OpenAI, Anthropic, Google Gemini"
+  features: "Generators, Actions, Agents, Structured output"
+  rails_integration: true
+  pricing: Free
+  status: Active
+  note: Model-agnostic AI framework for Ruby with generators and agents
