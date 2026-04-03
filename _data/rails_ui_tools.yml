@@ -313,3 +313,23 @@
   frontend: Stimulus
   pricing: "Freemium ($149+)"
   status: Unknown
+
+- key: flowbitecomponents
+  name: Flowbite Components
+  links:
+    home: https://flowbite-components.substancelab.com
+    github: https://github.com/substancelab/flowbite-components
+    docs: https://flowbite-components.substancelab.com/docs
+    demo: https://flowbite-components.substancelab.com/lookbook/
+  components: "~19"
+  design_system: true
+  templates: false
+  figma: false
+  icons: false
+  gem: true
+  rendering: ViewComponent
+  form_builder: true
+  styling: "Tailwind CSS, Flowbite"
+  frontend: ""
+  pricing: Free
+  status: Active
