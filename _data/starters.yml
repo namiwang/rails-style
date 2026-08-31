@@ -1,3 +1,16 @@
+- key: rails_baseline
+  name: Rails Baseline
+  links:
+    home: https://railsbaseline.com/
+    pricing: https://railsbaseline.com/#pricing
+  type: Agentic SaaS Starter Kit
+  features: "Auth, Billing, Teams,. Dashboard, UI, Agent instructions, Architectural contracts"
+  styling: Tailwind CSS
+  frontend: Stimulus/Hotwire/Turbo or React Islands
+  pricing: "Paid ($129+)"
+  status: Active
+  note: "Answers: How should the code that comes next fit this application"
+
 - key: instrumental
   name: Instrumental
   links:
